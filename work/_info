@@ -1,0 +1,157 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/modelsim_dlx64_10.7b/examples
+valu
+Z0 !s110 1550947911
+!i10b 1
+!s100 ZiLzW2QU3U415V1hR<bh^0
+IADNBWRk8[26>_hlcVF3d_2
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 dC:/Users/logwood/Desktop/CAO-Project
+Z3 w1550947812
+8C:/Users/logwood/Desktop/CAO-Project/alu.v
+FC:/Users/logwood/Desktop/CAO-Project/alu.v
+L0 6
+Z4 OP;L;10.7b;67
+r1
+!s85 0
+31
+Z5 !s108 1550947911.000000
+!s107 C:/Users/logwood/Desktop/CAO-Project/alu.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/logwood/Desktop/CAO-Project/alu.v|
+!i113 1
+Z6 o-work work
+Z7 tCvgOpt 0
+vctrl
+!s110 1550960320
+!i10b 1
+!s100 j5MoOez?l:mZ[7doDMNO=0
+IlM:Q5W;Wg3cF_^M`k64bQ2
+R1
+R2
+w1550960315
+8C:/Users/logwood/Desktop/CAO-Project/ctrl.v
+FC:/Users/logwood/Desktop/CAO-Project/ctrl.v
+L0 6
+R4
+r1
+!s85 0
+31
+!s108 1550960320.000000
+!s107 C:/Users/logwood/Desktop/CAO-Project/ctrl.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/logwood/Desktop/CAO-Project/ctrl.v|
+!i113 1
+R6
+R7
+vmux32
+R0
+!i10b 1
+!s100 J7VXJLC31:N<5Km6Cf5]f0
+IaodQ0naH:a1;ZF1<<3YH22
+R1
+R2
+R3
+8C:/Users/logwood/Desktop/CAO-Project/mux32.v
+FC:/Users/logwood/Desktop/CAO-Project/mux32.v
+L0 6
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/logwood/Desktop/CAO-Project/mux32.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/logwood/Desktop/CAO-Project/mux32.v|
+!i113 1
+R6
+R7
+vmux4
+R0
+!i10b 1
+!s100 JF=`7SIBT1FPGU?USX7a23
+Ia;a=];^ReoO7L5XI^e?0g2
+R1
+R2
+R3
+8C:/Users/logwood/Desktop/CAO-Project/mux4.v
+FC:/Users/logwood/Desktop/CAO-Project/mux4.v
+L0 6
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/logwood/Desktop/CAO-Project/mux4.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/logwood/Desktop/CAO-Project/mux4.v|
+!i113 1
+R6
+R7
+vrf
+R0
+!i10b 1
+!s100 zTm^Add]I@IWMg0G=6HeM1
+IUPJWkJ18Pa^UfGbNm:7oY1
+R1
+R2
+R3
+8C:/Users/logwood/Desktop/CAO-Project/rf.v
+FC:/Users/logwood/Desktop/CAO-Project/rf.v
+L0 6
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/logwood/Desktop/CAO-Project/rf.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/logwood/Desktop/CAO-Project/rf.v|
+!i113 1
+R6
+R7
+vsisc_tb
+R0
+!i10b 1
+!s100 jQ?cd9SA]gEI5V`5YcCz70
+IT`7]]OELe@<_ARL2Vc^GL3
+R1
+R2
+R3
+8C:/Users/logwood/Desktop/CAO-Project/sisc_tb_p1.v
+FC:/Users/logwood/Desktop/CAO-Project/sisc_tb_p1.v
+L0 6
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/logwood/Desktop/CAO-Project/sisc_tb_p1.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/logwood/Desktop/CAO-Project/sisc_tb_p1.v|
+!i113 1
+R6
+R7
+vstatreg
+!s110 1550947912
+!i10b 1
+!s100 JfTQO;RhP[aKTeQF0kAhC1
+I59D:g`EYWB8MFk^oAKSzX3
+R1
+R2
+R3
+8C:/Users/logwood/Desktop/CAO-Project/statreg.v
+FC:/Users/logwood/Desktop/CAO-Project/statreg.v
+L0 6
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/logwood/Desktop/CAO-Project/statreg.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/logwood/Desktop/CAO-Project/statreg.v|
+!i113 1
+R6
+R7

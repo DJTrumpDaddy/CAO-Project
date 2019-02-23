@@ -56,7 +56,7 @@ module ctrl (clk, rst_f, opcode, mm, stat, rf_we, alu_op, wb_sel);
   begin
     if (opcode == HLT)
     begin 
-      #5 $display ("Halt."); //Delay 5 ns so $monitor will print the halt instruction
+      #5 $display ("Halt."); /-/Delay 5 ns so $monitor will print the halt instruction
       $stop;
     end
   end
