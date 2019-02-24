@@ -36,7 +36,7 @@ module ctrl (clk, rst_f, opcode, mm, stat, rf_we, alu_op, wb_sel);
 	always@(posedge clk or negedge rst_f)
 	begin
 		if(~rst_f) 
-			present_state <= start0;
+			present_state <= start1;
 		else
 			present_state <= next_state;
 	end
@@ -44,7 +44,9 @@ module ctrl (clk, rst_f, opcode, mm, stat, rf_we, alu_op, wb_sel);
   
   /* TODO: Write a combination procedure that determines the next state of the fsm. */
 
-
+	always
+	begin
+	end
 
 
   /* TODO: Generate outputs based on the FSM states and inputs. For Parts 2, 3 and 4 you will
