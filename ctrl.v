@@ -15,10 +15,10 @@ module ctrl (clk, rst_f, opcode, mm, stat, rf_we, alu_op, wb_sel);
   
   
   // states
-  parameter start0 = 0, start1 = 1, fetch = 2, decode = 3, execute = 4, mem = 5, writeback = 6;
+  parameter start0 = 3'b0, start1 = 3'b1, fetch = 3'b10, decode = 3'b11, execute = 3'b100, mem = 3'b101, writeback = 3'b110;
    
   // opcodes
-  parameter NOOP = 0, LOD = 1, STR = 2, SWP = 3, BRA = 4, BRR = 5, BNE = 6, BNR = 7, ALU_OP = 8, HLT=15;
+  parameter NOOP = 4'b0, LOD = 4'b1, STR = 4'b10, SWP = 4'b11, BRA = 4'b100, BRR = 4'b101, BNE = 4'b110, BNR = 4'b111, ALU_OP = 4'b1000, HLT = 4'b1111;
 	
   // addressing modes
   parameter am_imm = 8;
@@ -44,8 +44,16 @@ module ctrl (clk, rst_f, opcode, mm, stat, rf_we, alu_op, wb_sel);
   
   /* TODO: Write a combination procedure that determines the next state of the fsm. */
 
-	always
+	
+	always@(*)
 	begin
+		assign next_state = (present_state == start0) ? start1:
+			(present_state == start1) ? fetch:
+			(present_state == fetch) ? decode:
+			(present_state == decode) ? execute:
+			(present_state == execute) ? mem:
+			(present_state == mem) ? writeback:
+			start1;
 	end
 
 
