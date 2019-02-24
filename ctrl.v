@@ -33,9 +33,11 @@ module ctrl (clk, rst_f, opcode, mm, stat, rf_we, alu_op, wb_sel);
        positive edge of the clock, OR resets the state to 'start1' on the negative edge
        of rst_f. Notice that the computer is reset when rst_f is low, not high. */
 	   
-	always@(posedge clk or negedge rst_f)
+	//Go through this loop on the positive edge of the clock or the negative edge
+	//of reset signal "rst_f"
+	always@(posedge clk or negedge rst_f) 
 	begin
-		if(~rst_f) 
+		if(~rst_f) // (~rst_f) = 1 when rst_f = 0. This format only works for bitwise negation
 			present_state <= start1;
 		else
 			present_state <= next_state;
@@ -45,7 +47,7 @@ module ctrl (clk, rst_f, opcode, mm, stat, rf_we, alu_op, wb_sel);
   /* TODO: Write a combination procedure that determines the next state of the fsm. */
 
 	
-	always@(*)
+	always@(*) // asterisk is valid shorthand syntax. See https://bit.ly/2BOdDw0 for more info
 	begin
 		case(present_state)
 			start0: next_state <= start1;
@@ -55,7 +57,7 @@ module ctrl (clk, rst_f, opcode, mm, stat, rf_we, alu_op, wb_sel);
 			execute: next_state <= mem;
 			mem: next_state <= writeback;
 			writeback: next_state <= fetch;
-			default: next_state <= start0;
+			default: next_state <= start0; //I don't know if this is necessary here, but just to be safe
 		endcase
 	end
 
@@ -66,13 +68,13 @@ module ctrl (clk, rst_f, opcode, mm, stat, rf_we, alu_op, wb_sel);
 	   begin
 		case(present_state)
 			start0:
-				rf_we <= 0;
-				wb_sel <= 0;
+				rf_we <= 0; // no write to register file
+				wb_sel <= 0; // not exactly sure what this is supposed to be for 
 				
-				alu_op <= 2'b10;
+				alu_op <= 2'b10; // no ALU operation
 				
 			start1:
-				rf_we <= 0;
+				rf_we <= 0; 
 				wb_sel <= 0;
 				
 				alu_op <= 2'b10;
@@ -87,9 +89,9 @@ module ctrl (clk, rst_f, opcode, mm, stat, rf_we, alu_op, wb_sel);
 				rf_we <= 0;
 				wb_sel <= 0;
 				if(opcode == ALU_OP && mm == ALU_OP)
-					alu_op <= 2'b01;
+					alu_op <= 2'b01; // arithmetic instruction
 				else
-					alu_op <= 2'b00;
+					alu_op <= 2'b00; // some other arithmetic operation
 				
 			mem:
 				rf_we <= 0;
@@ -100,24 +102,20 @@ module ctrl (clk, rst_f, opcode, mm, stat, rf_we, alu_op, wb_sel);
 					alu_op <= 2'b00;
 				
 			writeback:
-				rf_we <= 1;
+				rf_we <= 1; //register file write enabled
 				wb_sel <= 0;
 				if(opcode == ALU_OP && mm == ALU_OP)
 					alu_op <= 2'b10;
 				else
 					alu_op <= 2'b00;
 			
-			default: 
+			default:  //default to initial conditions to be safe
 				rf_we <= 0;
 				wb_sel <= 0;
 				
 				alu_op <= 2'b10;
 		endcase
 	end
-					
-				
-				
-	   
 
 // Halt on HLT instruction
   
