@@ -55,12 +55,42 @@ module ctrl (clk, rst_f, opcode, mm, stat, rf_we, alu_op, wb_sel);
 			execute: next_state <= mem;
 			mem: next_state <= writeback;
 			writeback: next_state <= start1;
+		endcase
 	end
 
 
   /* TODO: Generate outputs based on the FSM states and inputs. For Parts 2, 3 and 4 you will
        add the new control signals here. */
-	   
+	   always@(*)
+	   begin
+		case(present_state)
+			start0:
+				rf_we <= 0;
+				wb_sel <= 0;
+				
+				alu_op <= 2'b10;
+				
+			start1:
+				rf_we <= 0;
+				wb_sel <= 0;
+				
+				alu_op <= 2'b10;
+				
+			fetch:
+				rf_we <= 0;
+				wb_sel <= 0;
+				
+				alu_op <= 2'b10;
+				
+			execute:
+				if(opcode == ALU_OP && mm == ALU_OP)
+					alu_op <= b'01;
+				else
+					alu_op <= b'00;
+				
+			mem:
+				
+				
 	   
 
 // Halt on HLT instruction
