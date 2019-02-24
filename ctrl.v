@@ -47,13 +47,14 @@ module ctrl (clk, rst_f, opcode, mm, stat, rf_we, alu_op, wb_sel);
 	
 	always@(*)
 	begin
-		assign next_state = (present_state == start0) ? start1:
-			(present_state == start1) ? fetch:
-			(present_state == fetch) ? decode:
-			(present_state == decode) ? execute:
-			(present_state == execute) ? mem:
-			(present_state == mem) ? writeback:
-			start1;
+		case(present_state)
+			start0: next_state <= start1;
+			start1: next_state <= fetch;
+			fetch: next_state <= decode;
+			decode: next_state <= execute;
+			execute: next_state <= mem;
+			mem: next_state <= writeback;
+			writeback: next_state <= start1;
 	end
 
 
