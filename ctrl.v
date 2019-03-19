@@ -7,18 +7,23 @@ module ctrl (clk, rst_f, opcode, mm, stat, rf_we, alu_op, wb_sel);
 
   /* TODO: Declare the ports listed above as inputs or outputs */
   //completed declarations
-  input clk, rst_f, stat;
-  input[3:0] opcode, mm;
+  input clk, rst_f;
+  input[3:0] stat, opcode, mm;
   
-  output rf_we, wb_sel;
-  output[1:0] alu_op;
+output rf_we, wb_sel;
+output[1:0] alu_op;
+
+reg rf_we, wb_sel;
+reg[1:0] alu_op;
+
+
   
   
   // states
-  parameter start0 = 3'b0, start1 = 3'b1, fetch = 3'b10, decode = 3'b11, execute = 3'b100, mem = 3'b101, writeback = 3'b110;
+  parameter start0 = 0, start1 = 1, fetch = 2, decode = 3, execute = 4, mem = 5, writeback = 6;
    
   // opcodes
-  parameter NOOP = 4'b0, LOD = 4'b1, STR = 4'b10, SWP = 4'b11, BRA = 4'b100, BRR = 4'b101, BNE = 4'b110, BNR = 4'b111, ALU_OP = 4'b1000, HLT = 4'b1111;
+  parameter NOOP = 0, LOD = 1, STR = 2, SWP = 3, BRA = 4, BRR = 5, BNE = 6, BNR = 7, ALU_OP = 8, HLT = 15;
 	
   // addressing modes
   parameter am_imm = 8;
@@ -67,53 +72,66 @@ module ctrl (clk, rst_f, opcode, mm, stat, rf_we, alu_op, wb_sel);
 	   always@(*)
 	   begin
 		case(present_state)
-			start0:
+			start0: 
+			begin
 				rf_we <= 0; // no write to register file
 				wb_sel <= 0; // not exactly sure what this is supposed to be for 
 				
 				alu_op <= 2'b10; // no ALU operation
+			end
 				
 			start1:
+			begin
 				rf_we <= 0; 
 				wb_sel <= 0;
 				
 				alu_op <= 2'b10;
+			end
 				
 			fetch:
+			begin
 				rf_we <= 0;
 				wb_sel <= 0;
 				
 				alu_op <= 2'b10;
+			end
 				
 			execute:
+			begin
 				rf_we <= 0;
 				wb_sel <= 0;
 				if(opcode == ALU_OP && mm == ALU_OP)
 					alu_op <= 2'b01; // arithmetic instruction
 				else
 					alu_op <= 2'b00; // some other arithmetic operation
-				
+			end
 			mem:
+			begin
 				rf_we <= 0;
 				wb_sel <= 0;
 				if(opcode == ALU_OP && mm == ALU_OP)
 					alu_op <= 2'b01;
 				else
 					alu_op <= 2'b00;
+			end
 				
 			writeback:
+			begin
 				rf_we <= 1; //register file write enabled
 				wb_sel <= 0;
 				if(opcode == ALU_OP && mm == ALU_OP)
 					alu_op <= 2'b10;
 				else
 					alu_op <= 2'b00;
-			
+			end
+
 			default:  //default to initial conditions to be safe
+			begin
 				rf_we <= 0;
 				wb_sel <= 0;
 				
 				alu_op <= 2'b10;
+			end
 		endcase
 	end
 
