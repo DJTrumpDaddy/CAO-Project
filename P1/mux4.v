@@ -30,7 +30,7 @@ module mux4 (in_a, in_b, sel, out);
     if (sel == 1'b0)
       out = in_a;
     else
-      out = in_b;
+      out = in_b
   end
 
 endmodule 

@@ -3,14 +3,14 @@
 
 `timescale 1ns/100ps
 
-module ctrl (clk, rst_f, opcode, mm, stat, rf_we, alu_op, wb_sel);
+module ctrl (clk, rst_f, opcode, mm, stat, rf_we, alu_op, wb_sel, br_sel);
 
   /* TODO: Declare the ports listed above as inputs or outputs */
   //completed declarations
   input clk, rst_f;
   input[3:0] stat, opcode, mm;
   
-output rf_we, wb_sel;
+output rf_we, wb_sel, br_sel;
 output[1:0] alu_op;
 
 reg rf_we, wb_sel;
