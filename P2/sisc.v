@@ -12,7 +12,7 @@ module sisc (clk, rst_f, ir);
   wire[1:0] alu_op; //alu_op 
   wire wb_sel; //wb_sel
   wire rf_we; //rf_we
-  wire stat_en, br_sel; //stat_en
+  wire stat_en, br_sel, pc_sel; //stat_en
   
   wire[3:0] read_regb; //read_regb
   wire[31:0] rsa; //rsa
@@ -27,7 +27,7 @@ module sisc (clk, rst_f, ir);
 
 // component instantiation goes here
 
-  ctrl ControlUnit (clk, rst_f, ir[31:28] /*opcode*/, ir[27:24] /*mm*/, stat_out, rf_we, alu_op, wb_sel, br_sel);
+  ctrl ControlUnit (clk, rst_f, ir[31:28] /*opcode*/, ir[27:24] /*mm*/, stat_out, rf_we, alu_op, wb_sel, br_sel, pc_sel);
   
   mux4 Mux4 (ir[15:12] /*in_a*/, ir[23:20] /*in_b*/, 1'b0, read_regb);
   
@@ -43,9 +43,9 @@ module sisc (clk, rst_f, ir);
 
   ir InstructionRegister (clk, /*ir_load*/, read_data, /*instr*/);
 
-  pc ProgramCounter (clk, br_addr, /*pc_sel*/, /*pc_write*/, /*pc_rst*/, pc_out);
+  pc ProgramCounter (clk, br_addr, pc_sel, /*pc_write*/, /*pc_rst*/, pc_out);
 
-  br BranchCalculator (pc_out, ir[15:0], br_sel, br_addr)
+  br BranchCalculator (pc_out /*pc_in*/, ir[15:0] /*imm*/, br_sel, br_addr)
   
                
   
