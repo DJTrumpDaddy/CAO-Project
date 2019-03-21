@@ -50,7 +50,7 @@ module sisc (clk, rst_f);
 
   pc ProgramCounter (clk, br_addr, pc_sel, pc_write, pc_rst, pc_out);
 
-  br BranchCalculator (pc_out + 16'h1 /*pc_inc*/, instr[15:0] /*imm*/, br_sel, br_addr);
+  br BranchCalculator (pc_out /*pc_inc*/, instr[15:0] /*imm*/, br_sel, br_addr);
   
                
   

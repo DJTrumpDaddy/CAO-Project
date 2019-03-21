@@ -69,6 +69,9 @@ module ctrl (clk, rst_f, opcode, mm, stat, rf_we, alu_op, wb_sel, br_sel, pc_sel
 
   /* TODO: Generate outputs based on the FSM states and inputs. For Parts 2, 3 and 4 you will
        add the new control signals here. */
+
+	// LOGAN: we are going to have to think this one through for sure.
+	// Decode state was absent
 	   always@(*)
 	   begin
 		case(present_state)
@@ -76,7 +79,13 @@ module ctrl (clk, rst_f, opcode, mm, stat, rf_we, alu_op, wb_sel, br_sel, pc_sel
 			begin
 				rf_we <= 0; // no write to register file
 				wb_sel <= 0; // not exactly sure what this is supposed to be for 
-				
+
+				br_sel <= 0;
+				pc_sel <= 0;
+				ir_load <= 0;
+				pc_write <= 0;
+				pc_rst <= 1;
+
 				alu_op <= 2'b10; // no ALU operation
 			end
 				
@@ -84,16 +93,35 @@ module ctrl (clk, rst_f, opcode, mm, stat, rf_we, alu_op, wb_sel, br_sel, pc_sel
 			begin
 				rf_we <= 0; 
 				wb_sel <= 0;
-				
+
+				br_sel <= 0;
+				pc_sel <= 0;
+				ir_load <= 0;
+				pc_write <= 0;
+				pc_rst <= 1;
+
 				alu_op <= 2'b10;
 			end
 				
 			fetch:
 			begin
 				rf_we <= 0;
+
+				wb_sel <= 0;
+				br_sel <= 0;
+				pc_sel <= 0;
+				ir_load <= 0;
+				pc_write <= 0;
+				pc_rst <= 0;
+
+				alu_op <= 2'b10;
+			end
+
+			decode:
+			begin
+				rf_we <= 0;
 				wb_sel <= 0;
 				
-				alu_op <= 2'b10;
 			end
 				
 			execute:
