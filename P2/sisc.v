@@ -11,7 +11,7 @@ module sisc (clk, rst_f);
 
 /*ctrl.v outputs*/
   wire[1:0] alu_op; //ctrl.v output
-  wire rf_we, wb_sel, br_sel, pc_sel, ir_load, pc_write, pc_rst; //ctrl.v outputs
+  wire rf_we, wb_sel, br_sel, pc_sel, ir_load, pc_write, pc_rst, rb_sel; //ctrl.v outputs
 
 /*alu outputs*/
   wire stat_en; //alu.v output 
@@ -32,9 +32,9 @@ module sisc (clk, rst_f);
 
 // component instantiation goes here
 
-  ctrl ControlUnit (clk, rst_f, instr[31:28] /*opcode*/, instr[27:24] /*mm*/, stat_out, rf_we, alu_op, wb_sel, br_sel, pc_sel, ir_load, pc_write, pc_rst);
+  ctrl ControlUnit (clk, rst_f, instr[31:28] /*opcode*/, instr[27:24] /*mm*/, stat_out, rf_we, alu_op, wb_sel, br_sel, pc_sel, ir_load, pc_write, pc_rst, rb_sel);
   
-  mux4 Mux4 (instr[15:12] /*in_a*/, instr[23:20] /*in_b*/, 1'b0, mux4_out);
+  mux4 Mux4 (instr[15:12] /*in_a*/, instr[23:20] /*in_b*/, rb_sel, mux4_out);
   
   rf RegisterFile (clk, instr[19:16] /*read_rega*/, mux4_out, instr[23:20] /*write_reg*/, mux32_out, rf_we, rsa, rsb);
   
