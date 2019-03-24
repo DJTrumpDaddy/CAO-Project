@@ -70,8 +70,6 @@ module ctrl (clk, rst_f, opcode, mm, stat, rf_we, alu_op, wb_sel, br_sel, pc_sel
   /* TODO: Generate outputs based on the FSM states and inputs. For Parts 2, 3 and 4 you will
        add the new control signals here. */
 
-	// LOGAN: we are going to have to think this one through for sure.
-	// Decode state was absent
 	   always@(*)
 	   begin
 		case(present_state)
@@ -85,7 +83,7 @@ module ctrl (clk, rst_f, opcode, mm, stat, rf_we, alu_op, wb_sel, br_sel, pc_sel
 				br_sel <= 1; // br_addr set to immediate value only (should be 0 if ir_load is 0) (DO NOT TOUCH)
 
 				pc_rst <= 1; // pc_out set to 0 (DO NOT TOUCH)
-				pc_sel <= 0; // pc_in is set to br_addr(0) (DO NOT TOUCH)
+				pc_sel <= 1; // pc_in is set to br_addr(0) (DO NOT TOUCH)
 				pc_write <= 0; // as long as pc_rst == 1, this doesn't matter too much, but 0 is a safety (TOUCH IF YOU LIKE A LITTLE DANGER)
 				
 
@@ -94,30 +92,36 @@ module ctrl (clk, rst_f, opcode, mm, stat, rf_we, alu_op, wb_sel, br_sel, pc_sel
 				
 			start1:
 			begin
-				rf_we <= 0; 
-				wb_sel <= 0;
+				ir_load <= 0; // ir output is 0 (DO NOT TOUCH)
 
-				br_sel <= 0;
-				pc_sel <= 0;
-				ir_load <= 0;
-				pc_write <= 0;
-				pc_rst <= 1;
+				rf_we <= 0; // register write off (DO NOT TOUCH)
+				wb_sel <= 0; // write_data set to alu output (DO NOT TOUCH)
+				
+				br_sel <= 1; // br_addr set to immediate value only (should be 0 if ir_load is 0) (DO NOT TOUCH)
 
-				alu_op <= 2'b10;
+				pc_rst <= 1; // pc_out set to 0 (DO NOT TOUCH)
+				pc_sel <= 1; // pc_in is set to br_addr(0) (DO NOT TOUCH)
+				pc_write <= 0; // as long as pc_rst == 1, this doesn't matter too much, but 0 is a safety (TOUCH IF YOU LIKE A LITTLE DANGER)
+				
+
+				alu_op <= 2'b10; // no arithmetic, not immediate value input
 			end
 				
 			fetch:
 			begin
-				rf_we <= 0;
+				ir_load <= 1; // ir activated
 
-				wb_sel <= 0;
-				br_sel <= 0;
-				pc_sel <= 0;
-				ir_load <= 0;
-				pc_write <= 0;
-				pc_rst <= 0;
+				rf_we <= 0; // register write off (DO NOT TOUCH)
+				wb_sel <= 0; // write_data set to alu output (DO NOT TOUCH)
+				
+				br_sel <= 1; // br_addr set to immediate value only (DO NOT TOUCH)
 
-				alu_op <= 2'b10;
+				pc_rst <= 0; //  PC not reset (DO NOT TOUCH)
+				pc_sel <= 0; // pc_in + 1 (DO NOT TOUCH)
+				pc_write <= 0; // pc_out <= pc_in (DO NOT TOUCH)
+				
+
+				alu_op <= 2'b10; // no arithmetic, not immediate value input
 			end
 
 			decode:
