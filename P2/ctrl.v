@@ -74,92 +74,23 @@ module ctrl (clk, rst_f, opcode, mm, stat, rf_we, alu_op, wb_sel, br_sel, pc_sel
 		case(present_state)
 			start0: 
 			begin
-				ir_load <= 0; // ir output is 0 (DO NOT TOUCH)
-				rb_sel <= 0;
-				rf_we <= 0; // register write off (DO NOT TOUCH)
-				wb_sel <= 0; // write_data set to alu output (DO NOT TOUCH)				
-				br_sel <= 1; // br_addr set to immediate value + 0 (should be 0 if ir_load is 0) (DO NOT TOUCH)
-				pc_rst <= 1; // pc_out set to 0 (DO NOT TOUCH)
-				pc_sel <= 1; // pc_in is set to br_addr(0) (DO NOT TOUCH)
-				pc_write <= 0; // as long as pc_rst == 1, this doesn't matter too much, but 0 is a safety (TOUCH IF YOU LIKE A LITTLE DANGER)
-				alu_op <= 2'b10; // no arithmetic, not immediate value input
+				// nothing necessary here
 			end
 				
 			start1:
 			begin
-				ir_load <= 0; // ir output is 0 (DO NOT TOUCH)
-
-				rb_sel <= 0;
-
-				rf_we <= 0; // register write off (DO NOT TOUCH)
-				wb_sel <= 0; // write_data set to alu output (DO NOT TOUCH)
-				
-				br_sel <= 1; // br_addr set to immediate value only (should be 0 if ir_load is 0) (DO NOT TOUCH)
-
-				pc_rst <= 1; // pc_out set to 0 (DO NOT TOUCH)
-				pc_sel <= 1; // pc_in is set to br_addr(0) (DO NOT TOUCH)
-				pc_write <= 0; // as long as pc_rst == 1, this doesn't matter too much, but 0 is a safety (TOUCH IF YOU LIKE A LITTLE DANGER)
-				
-
-				alu_op <= 2'b10; // no arithmetic, not immediate value input
+				pc_rst <= 1; //reset pc to 0
 			end
 				
 			fetch:
 			begin
-				ir_load <= 1; // ir activated
-
-				rb_sel <= 0;
-
-				rf_we <= 0; // register write off (DO NOT TOUCH)
-				wb_sel <= 0; // write_data set to alu output (DO NOT TOUCH)
-				
-				br_sel <= 0; // br_addr set to immediate value + pc_out (DO NOT TOUCH)
-
-				pc_rst <= 0; //  PC not reset (DO NOT TOUCH)
-				pc_sel <= 0; // pc_in + 1 (DO NOT TOUCH)
-				pc_write <= 0; // pc_out <= pc_in (DO NOT TOUCH)
-				
-
-				alu_op <= 2'b10; // 1 no arithmetic, 0 not immediate value input
+				ir_load <= 1; // load instruction register
+				pc_sel <= 0; // increment pc_in
+				pc_write <= 1; // write pc_out <= pc_in
 			end
 
 			decode:
 			begin
-				ir_load <= 0; // ir deactivated
-
-				rb_sel <= 0;
-
-				rf_we <= 0; // reg write off
-				wb_sel <= 0; // write_data <= alu output
-
-				br_sel <= 0; // br_addr <= imm + pc_out
-
-				pc_rst <= 0; //PC not reset
-
-				if(opcode == BRA || opcode == BRR || opcode == BNE || opcode == BNR) begin
-					pc_write <= 1;
-					pc_sel <= 1;
-				end else begin
-					pc_write <= 0;
-				end
-
-				alu_op <= 2'b10;
-				
-			end
-				
-			execute:
-			begin
-				ir_load <= 0; // ir deactivated
-
-				rb_sel <= 0;
-
-				rf_we <= 0; // reg write off
-				wb_sel <= 0; // write_data <= alu output
-
-				br_sel <= 0; // br_addr <= imm + pc_out
-
-				pc_rst <= 0; //PC not reset
-
 				if(opcode == BNE || opcode == BRA) begin
 					br_sel <= 1;
 				end else if(opcode == BNR || opcode == BRR)
@@ -173,72 +104,44 @@ module ctrl (clk, rst_f, opcode, mm, stat, rf_we, alu_op, wb_sel, br_sel, pc_sel
 					pc_write <= 0;
 
 			end
+				
+			execute:
+			begin
+				if(opcode == ALU_OP) begin
+					if(mm == 4'b1000) begin
+						alu_op <= 2'b01;
+					end else begin
+						alu_op <= 2'b00
+					end
+				end
+			end
 
 			mem:
 			begin
-				ir_load <= 0; // ir deactivated
-
-				rb_sel <= 0;
-
-				rf_we <= 0; // reg write off
-				wb_sel <= 0; // write_data <= alu output
-
-				br_sel <= 0; // br_addr <= imm + pc_out
-
-				pc_rst <= 0; //PC not reset
-
-				if(opcode == ALU_OP && mm == ALU_OP) begin
-					alu_op <= 2'b01; // arithmetic instruction
-				end else if (opcode == ALU_OP) begin
-					alu_op <= 2'b00; // some other arithmetic operation
-				end else begin
-					alu_op <= 2'b10;
+				if(opcode == ALU_OP) begin
+					if(mm == 4'b1000) begin
+						alu_op <= 2'b01;
+					end else begin
+						alu_op <= 2'b00
+					end
 				end
 			end
 				
 			writeback:
 			begin
-				ir_load <= 0; // ir deactivated
-
-				rb_sel <= 0;
-				if(opcode == BRA || opcode == BRR || opcode == BNE || opcode == BNR) begin
-					rf_we <= 0;
-				end else begin
+				if(opcode == ALU_OP) begin
+					if(mm == 4'b1000) begin
+						alu_op <= 2'b01;
+					end else begin
+						alu_op <= 2'b00
+					end
 					rf_we <= 1;
-				end
-
-				wb_sel <= 0; // write_data <= alu output
-
-				br_sel <= 0; // br_addr <= imm + pc_out
-
-				pc_rst <= 0; //PC not reset
-
-				if(opcode == ALU_OP && mm == ALU_OP) begin
-					alu_op <= 2'b01; // arithmetic instruction
-				end else if (opcode == ALU_OP) begin
-					alu_op <= 2'b00; // some other arithmetic operation
-				end else begin
-					alu_op <= 2'b10;
 				end
 			end
 
-			default:  //default to initial conditions to be safe
+			default:
 			begin
-				ir_load <= 0; // ir output is 0 (DO NOT TOUCH)
-
-				rb_sel <= 0;
-
-				rf_we <= 0; // register write off (DO NOT TOUCH)
-				wb_sel <= 0; // write_data set to alu output (DO NOT TOUCH)
-				
-				br_sel <= 1; // br_addr set to immediate value only (should be 0 if ir_load is 0) (DO NOT TOUCH)
-
-				pc_rst <= 1; // pc_out set to 0 (DO NOT TOUCH)
-				pc_sel <= 1; // pc_in is set to br_addr(0) (DO NOT TOUCH)
-				pc_write <= 0; // as long as pc_rst == 1, this doesn't matter too much, but 0 is a safety (TOUCH IF YOU LIKE A LITTLE DANGER)
-				
-
-				alu_op <= 2'b10; // no arithmetic, not immediate value input
+				// nothing necessary here
 			end
 		endcase
 	end
