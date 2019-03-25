@@ -61,15 +61,20 @@ module ctrl (clk, rst_f, opcode, mm, stat, rf_we, alu_op, wb_sel, br_sel, pc_sel
 
 	always@(*)
 	begin
-			ir_load <= 0; // ir output is 0 (DO NOT TOUCH)
-			rb_sel <= 0;
-			rf_we <= 0; // register write off (DO NOT TOUCH)
-			wb_sel <= 0; // write_data set to alu output (DO NOT TOUCH)				
-			br_sel <= 0; // br_addr set to immediate value + 0 (should be 0 if ir_load is 0) (DO NOT TOUCH)
-			pc_rst <= 0; // pc_out set to 0 (DO NOT TOUCH)
-			pc_sel <= 0; // pc_in is set to br_addr(0) (DO NOT TOUCH)
-			pc_write <= 0; // as long as pc_rst == 1, this doesn't matter too much, but 0 is a safety (TOUCH IF YOU LIKE A LITTLE DANGER)
-			alu_op <= 2'b10; // no arithmetic, not immediate value input
+		// set values to these defaults every loop
+		ir_load <= 0; 
+		rb_sel <= 0;
+		rf_we <= 0; 
+		wb_sel <= 0;		
+		br_sel <= 0;
+		pc_rst <= 0; 
+		pc_sel <= 0;
+		pc_write <= 0;
+		alu_op <= 2'b10;
+
+		if(opcode == NOOP) begin
+			pc_write <= 1;
+		end
 
 		case(present_state)
 			start0: 
