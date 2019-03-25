@@ -13,7 +13,7 @@ module ctrl (clk, rst_f, opcode, mm, stat, rf_we, alu_op, wb_sel, br_sel, pc_sel
   output rf_we, wb_sel, br_sel, pc_sel, ir_load, pc_write, pc_rst, rb_sel;
   output[1:0] alu_op;
 
-  reg rf_we, wb_sel;
+  reg rf_we, wb_sel, br_sel, pc_sel, ir_load, pc_write, pc_rst, rb_sel;
   reg[1:0] alu_op;
 
 
@@ -121,13 +121,27 @@ module ctrl (clk, rst_f, opcode, mm, stat, rf_we, alu_op, wb_sel, br_sel, pc_sel
 				pc_write <= 0; // pc_out <= pc_in (DO NOT TOUCH)
 				
 
-				alu_op <= 2'b10; // 1 no arithmetic, 2 not immediate value input
+				alu_op <= 2'b10; // 1 no arithmetic, 0 not immediate value input
 			end
 
 			decode:
 			begin
-				rf_we <= 0;
-				wb_sel <= 0;
+				ir_load <= 0; // ir deactivated
+
+				rf_we <= 0; // reg write off
+				wb_sel <= 0; // write_data <= alu output
+
+				br_sel <= 0; // br_addr <= imm + pc_out
+
+				pc_rst <= 0; //PC not reset
+
+				if(opcode == BRA || opcode == BRR || opcode == BNE || opcode == BNR) begin
+					pc_write <= 1;
+					pc_sel <= 1;
+				end else begin
+					pc_write <= 0;
+				end
+
 
 				alu_op <= 2'b10;
 				
@@ -137,29 +151,38 @@ module ctrl (clk, rst_f, opcode, mm, stat, rf_we, alu_op, wb_sel, br_sel, pc_sel
 			begin
 				rf_we <= 0;
 				wb_sel <= 0;
-				if(opcode == ALU_OP && mm == ALU_OP)
+				if(opcode == ALU_OP && mm == ALU_OP) begin
 					alu_op <= 2'b01; // arithmetic instruction
-				else
+				end else if (opcode == ALU_OP) begin
 					alu_op <= 2'b00; // some other arithmetic operation
+				end else begin
+					alu_op <= 2'b10;
+				end
 			end
 			mem:
 			begin
 				rf_we <= 0;
 				wb_sel <= 0;
-				if(opcode == ALU_OP && mm == ALU_OP)
-					alu_op <= 2'b01;
-				else
-					alu_op <= 2'b00;
+				if(opcode == ALU_OP && mm == ALU_OP) begin
+					alu_op <= 2'b01; // arithmetic instruction
+				end else if (opcode == ALU_OP) begin
+					alu_op <= 2'b00; // some other arithmetic operation
+				end else begin
+					alu_op <= 2'b10;
+				end
 			end
 				
 			writeback:
 			begin
 				rf_we <= 1; //register file write enabled
 				wb_sel <= 0;
-				if(opcode == ALU_OP && mm == ALU_OP)
+				if(opcode == ALU_OP && mm == ALU_OP) begin
+					alu_op <= 2'b01; // arithmetic instruction
+				end else if (opcode == ALU_OP) begin
+					alu_op <= 2'b00; // some other arithmetic operation
+				end else begin
 					alu_op <= 2'b10;
-				else
-					alu_op <= 2'b00;
+				end
 			end
 
 			default:  //default to initial conditions to be safe
