@@ -77,6 +77,8 @@ module ctrl (clk, rst_f, opcode, mm, stat, rf_we, alu_op, wb_sel, br_sel, pc_sel
 			begin
 				ir_load <= 0; // ir output is 0 (DO NOT TOUCH)
 
+				rb_sel <= 0;
+
 				rf_we <= 0; // register write off (DO NOT TOUCH)
 				wb_sel <= 0; // write_data set to alu output (DO NOT TOUCH)
 				
@@ -93,6 +95,8 @@ module ctrl (clk, rst_f, opcode, mm, stat, rf_we, alu_op, wb_sel, br_sel, pc_sel
 			start1:
 			begin
 				ir_load <= 0; // ir output is 0 (DO NOT TOUCH)
+
+				rb_sel <= 0;
 
 				rf_we <= 0; // register write off (DO NOT TOUCH)
 				wb_sel <= 0; // write_data set to alu output (DO NOT TOUCH)
@@ -111,6 +115,8 @@ module ctrl (clk, rst_f, opcode, mm, stat, rf_we, alu_op, wb_sel, br_sel, pc_sel
 			begin
 				ir_load <= 1; // ir activated
 
+				rb_sel <= 0;
+
 				rf_we <= 0; // register write off (DO NOT TOUCH)
 				wb_sel <= 0; // write_data set to alu output (DO NOT TOUCH)
 				
@@ -127,6 +133,8 @@ module ctrl (clk, rst_f, opcode, mm, stat, rf_we, alu_op, wb_sel, br_sel, pc_sel
 			decode:
 			begin
 				ir_load <= 0; // ir deactivated
+
+				rb_sel <= 0;
 
 				rf_we <= 0; // reg write off
 				wb_sel <= 0; // write_data <= alu output
@@ -148,8 +156,17 @@ module ctrl (clk, rst_f, opcode, mm, stat, rf_we, alu_op, wb_sel, br_sel, pc_sel
 				
 			execute:
 			begin
-				rf_we <= 0;
-				wb_sel <= 0;
+				ir_load <= 0; // ir deactivated
+
+				rb_sel <= 0;
+
+				rf_we <= 0; // reg write off
+				wb_sel <= 0; // write_data <= alu output
+
+				br_sel <= 0; // br_addr <= imm + pc_out
+
+				pc_rst <= 0; //PC not reset
+
 				if(opcode == ALU_OP && mm == ALU_OP) begin
 					alu_op <= 2'b01; // arithmetic instruction
 				end else if (opcode == ALU_OP) begin
