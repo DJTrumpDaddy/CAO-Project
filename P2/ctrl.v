@@ -128,6 +128,7 @@ module ctrl (clk, rst_f, opcode, mm, stat, rf_we, alu_op, wb_sel, br_sel, pc_sel
 			end
 				
 			writeback:
+			rb_sel <= 1;
 			begin
 				if(opcode == ALU_OP) begin
 					if(mm == 4'b1000) begin
