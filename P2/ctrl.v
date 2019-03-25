@@ -5,52 +5,45 @@
 
 module ctrl (clk, rst_f, opcode, mm, stat, rf_we, alu_op, wb_sel, br_sel, pc_sel, ir_load, pc_write, pc_rst, rb_sel);
 
-  /* TODO: Declare the ports listed above as inputs or outputs */
-  //completed declarations
-  input clk, rst_f;
-  input[3:0] stat, opcode, mm;
+	/* TODO: Declare the ports listed above as inputs or outputs */
+  	//completed declarations
+  	input clk, rst_f;
+  	input[3:0] stat, opcode, mm;
 
-  output rf_we, wb_sel, br_sel, pc_sel, ir_load, pc_write, pc_rst, rb_sel;
-  output[1:0] alu_op;
+  	output rf_we, wb_sel, br_sel, pc_sel, ir_load, pc_write, pc_rst, rb_sel;
+  	output[1:0] alu_op;
 
-  reg rf_we, wb_sel, br_sel, pc_sel, ir_load, pc_write, pc_rst, rb_sel;
-  reg[1:0] alu_op;
+  	reg rf_we, wb_sel, br_sel, pc_sel, ir_load, pc_write, pc_rst, rb_sel;
+  	reg[1:0] alu_op;
 
 
   
   
-  // states
-  parameter start0 = 0, start1 = 1, fetch = 2, decode = 3, execute = 4, mem = 5, writeback = 6;
+  	// states
+ 	 parameter start0 = 0, start1 = 1, fetch = 2, decode = 3, execute = 4, mem = 5, writeback = 6;
    
-  // opcodes
-  parameter NOOP = 0, LOD = 1, STR = 2, SWP = 3, BRA = 4, BRR = 5, BNE = 6, BNR = 7, ALU_OP = 8, HLT = 15;
+  	// opcodes
+  	parameter NOOP = 0, LOD = 1, STR = 2, SWP = 3, BRA = 4, BRR = 5, BNE = 6, BNR = 7, ALU_OP = 8, HLT = 15;
 	
-  // addressing modes
-  parameter am_imm = 8;
+  	// addressing modes
+  	parameter am_imm = 8;
 
-  // state registers
-  reg [2:0]  present_state, next_state;
+ 	 // state registers
+  	reg [2:0]  present_state, next_state;
 
-  initial
-    present_state = start0;
-
-  /* TODO: Write a sequential procedure that progresses the fsm to the next state on the
-       positive edge of the clock, OR resets the state to 'start1' on the negative edge
-       of rst_f. Notice that the computer is reset when rst_f is low, not high. */
+  	initial
+    	present_state = start0;
 	   
 	//Go through this loop on the positive edge of the clock or the negative edge
 	//of reset signal "rst_f"
 	always@(posedge clk or negedge rst_f) 
 	begin
-		if(~rst_f) // (~rst_f) = 1 when rst_f = 0. This format only works for bitwise negation
+		if(~rst_f) begin // (~rst_f) = 1 when rst_f = 0. This format only works for bitwise negation
 			present_state <= start1;
-		else
+		end else begin
 			present_state <= next_state;
+		end
 	end
-
-  
-  /* TODO: Write a combination procedure that determines the next state of the fsm. */
-
 	
 	always@(*) // asterisk is valid shorthand syntax. See https://bit.ly/2BOdDw0 for more info
 	begin
@@ -66,29 +59,29 @@ module ctrl (clk, rst_f, opcode, mm, stat, rf_we, alu_op, wb_sel, br_sel, pc_sel
 		endcase
 	end
 
+	always@(*)
+	begin
+			ir_load <= 0; // ir output is 0 (DO NOT TOUCH)
+			rb_sel <= 0;
+			rf_we <= 0; // register write off (DO NOT TOUCH)
+			wb_sel <= 0; // write_data set to alu output (DO NOT TOUCH)				
+			br_sel <= 0; // br_addr set to immediate value + 0 (should be 0 if ir_load is 0) (DO NOT TOUCH)
+			pc_rst <= 0; // pc_out set to 0 (DO NOT TOUCH)
+			pc_sel <= 0; // pc_in is set to br_addr(0) (DO NOT TOUCH)
+			pc_write <= 0; // as long as pc_rst == 1, this doesn't matter too much, but 0 is a safety (TOUCH IF YOU LIKE A LITTLE DANGER)
+			alu_op <= 2'b10; // no arithmetic, not immediate value input
 
-  /* TODO: Generate outputs based on the FSM states and inputs. For Parts 2, 3 and 4 you will
-       add the new control signals here. */
-
-	   always@(*)
-	   begin
 		case(present_state)
 			start0: 
 			begin
 				ir_load <= 0; // ir output is 0 (DO NOT TOUCH)
-
 				rb_sel <= 0;
-
 				rf_we <= 0; // register write off (DO NOT TOUCH)
-				wb_sel <= 0; // write_data set to alu output (DO NOT TOUCH)
-				
+				wb_sel <= 0; // write_data set to alu output (DO NOT TOUCH)				
 				br_sel <= 1; // br_addr set to immediate value + 0 (should be 0 if ir_load is 0) (DO NOT TOUCH)
-
 				pc_rst <= 1; // pc_out set to 0 (DO NOT TOUCH)
 				pc_sel <= 1; // pc_in is set to br_addr(0) (DO NOT TOUCH)
 				pc_write <= 0; // as long as pc_rst == 1, this doesn't matter too much, but 0 is a safety (TOUCH IF YOU LIKE A LITTLE DANGER)
-				
-
 				alu_op <= 2'b10; // no arithmetic, not immediate value input
 			end
 				
@@ -167,13 +160,18 @@ module ctrl (clk, rst_f, opcode, mm, stat, rf_we, alu_op, wb_sel, br_sel, pc_sel
 
 				pc_rst <= 0; //PC not reset
 
-				if(opcode == ALU_OP && mm == ALU_OP) begin
-					alu_op <= 2'b01; // arithmetic instruction
-				end else if (opcode == ALU_OP) begin
-					alu_op <= 2'b00; // some other arithmetic operation
-				end else begin
-					alu_op <= 2'b10;
+				if(opcode == BNE || opcode == BRA) begin
+					br_sel <= 1;
+				end else if(opcode == BNR || opcode == BRR)
+					br_sel <= 0;
 				end
+
+				if((opcode == BNE || opcode == BNR) && (stat & mm) == 4'b0000 || (opcode == BRA || opcode == BRR) != 4'b0000) begin
+					pc_write <= 1;
+					pc_sel <= 1;
+				end else begin
+					pc_write <= 0;
+
 			end
 
 			mem:
