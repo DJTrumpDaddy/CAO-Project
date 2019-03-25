@@ -80,7 +80,7 @@ module ctrl (clk, rst_f, opcode, mm, stat, rf_we, alu_op, wb_sel, br_sel, pc_sel
 				rf_we <= 0; // register write off (DO NOT TOUCH)
 				wb_sel <= 0; // write_data set to alu output (DO NOT TOUCH)
 				
-				br_sel <= 1; // br_addr set to immediate value only (should be 0 if ir_load is 0) (DO NOT TOUCH)
+				br_sel <= 1; // br_addr set to immediate value + 0 (should be 0 if ir_load is 0) (DO NOT TOUCH)
 
 				pc_rst <= 1; // pc_out set to 0 (DO NOT TOUCH)
 				pc_sel <= 1; // pc_in is set to br_addr(0) (DO NOT TOUCH)
@@ -114,20 +114,22 @@ module ctrl (clk, rst_f, opcode, mm, stat, rf_we, alu_op, wb_sel, br_sel, pc_sel
 				rf_we <= 0; // register write off (DO NOT TOUCH)
 				wb_sel <= 0; // write_data set to alu output (DO NOT TOUCH)
 				
-				br_sel <= 1; // br_addr set to immediate value only (DO NOT TOUCH)
+				br_sel <= 0; // br_addr set to immediate value + pc_out (DO NOT TOUCH)
 
 				pc_rst <= 0; //  PC not reset (DO NOT TOUCH)
 				pc_sel <= 0; // pc_in + 1 (DO NOT TOUCH)
 				pc_write <= 0; // pc_out <= pc_in (DO NOT TOUCH)
 				
 
-				alu_op <= 2'b10; // no arithmetic, not immediate value input
+				alu_op <= 2'b10; // 1 no arithmetic, 2 not immediate value input
 			end
 
 			decode:
 			begin
 				rf_we <= 0;
 				wb_sel <= 0;
+
+				alu_op <= 2'b10;
 				
 			end
 				
