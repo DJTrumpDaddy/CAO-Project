@@ -142,7 +142,6 @@ module ctrl (clk, rst_f, opcode, mm, stat, rf_we, alu_op, wb_sel, br_sel, pc_sel
 					pc_write <= 0;
 				end
 
-
 				alu_op <= 2'b10;
 				
 			end
@@ -159,6 +158,7 @@ module ctrl (clk, rst_f, opcode, mm, stat, rf_we, alu_op, wb_sel, br_sel, pc_sel
 					alu_op <= 2'b10;
 				end
 			end
+
 			mem:
 			begin
 				rf_we <= 0;
