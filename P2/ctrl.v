@@ -91,16 +91,14 @@ module ctrl (clk, rst_f, opcode, mm, stat, rf_we, alu_op, wb_sel, br_sel, pc_sel
 			begin
 				if(opcode == BNE || opcode == BRA) begin
 					br_sel <= 1;
-				end else if(opcode == BNR || opcode == BRR)
+				end else if(opcode == BNR || opcode == BRR) begin
 					br_sel <= 0;
 				end
 
-				if((opcode == BNE || opcode == BNR) && (stat & mm) == 0 || (opcode == BRA || opcode == BRR) != 0) begin
-					pc_write <= 1;
+				if((opcode == BNE || opcode == BNR) && (stat & mm) == 0 || (opcode == BRA || opcode == BRR) && (stat & mm) != 0) begin
 					pc_sel <= 1;
-				end else begin
-					pc_write <= 0;
-
+					pc_write <= 1;
+				end
 			end
 				
 			execute:

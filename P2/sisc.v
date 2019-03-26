@@ -25,7 +25,7 @@ module sisc (clk, rst_f);
   wire[31:0] rsa, rsb; //rf.v outputs
   wire[3:0] stat_out; //stat.v outputs
   wire[15:0] pc_out; //pc.v outputs
-  wire[15:0] read_data; // im.v outputs
+  wire[31:0] read_data; // im.v outputs
   wire[15:0] br_addr; //br.v outputs
   
 

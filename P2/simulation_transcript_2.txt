@@ -1,0 +1,2915 @@
+run -all
+# 
+# instr= 00000000,
+# PC= xxxx
+# R1= 00000000,
+# R2= 00000000,
+# R3= 00000000,
+# R4= 00000000,
+# R5= 00000000,
+# R6= 00000000,
+# ALU_OP= 2,
+# BR_SEL= 0,
+# PC_WRITE= 0,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 00000000,
+# PC= 0000
+# R1= 00000000,
+# R2= 00000000,
+# R3= 00000000,
+# R4= 00000000,
+# R5= 00000000,
+# R6= 00000000,
+# ALU_OP= 2,
+# BR_SEL= 0,
+# PC_WRITE= 0,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 00000000,
+# PC= 0000
+# R1= 00000000,
+# R2= 00000000,
+# R3= 00000000,
+# R4= 00000000,
+# R5= 00000000,
+# R6= 00000000,
+# ALU_OP= 2,
+# BR_SEL= 0,
+# PC_WRITE= 1,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 00000000,
+# PC= 0001
+# R1= 00000000,
+# R2= 00000000,
+# R3= 00000000,
+# R4= 00000000,
+# R5= 00000000,
+# R6= 00000000,
+# ALU_OP= 2,
+# BR_SEL= 0,
+# PC_WRITE= 0,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 00000000,
+# PC= 0001
+# R1= 00000000,
+# R2= 00000000,
+# R3= 00000000,
+# R4= 00000000,
+# R5= 00000000,
+# R6= 00000000,
+# ALU_OP= 2,
+# BR_SEL= 0,
+# PC_WRITE= 1,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 88100001,
+# PC= 0002
+# R1= 00000000,
+# R2= 00000000,
+# R3= 00000000,
+# R4= 00000000,
+# R5= 00000000,
+# R6= 00000000,
+# ALU_OP= 2,
+# BR_SEL= 0,
+# PC_WRITE= 0,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 88100001,
+# PC= 0002
+# R1= 00000000,
+# R2= 00000000,
+# R3= 00000000,
+# R4= 00000000,
+# R5= 00000000,
+# R6= 00000000,
+# ALU_OP= 1,
+# BR_SEL= 0,
+# PC_WRITE= 0,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 88100001,
+# PC= 0002
+# R1= 00000000,
+# R2= 00000000,
+# R3= 00000000,
+# R4= 00000000,
+# R5= 00000000,
+# R6= 00000000,
+# ALU_OP= 2,
+# BR_SEL= 0,
+# PC_WRITE= 0,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 88100001,
+# PC= 0002
+# R1= 00000001,
+# R2= 00000000,
+# R3= 00000000,
+# R4= 00000000,
+# R5= 00000000,
+# R6= 00000000,
+# ALU_OP= 2,
+# BR_SEL= 0,
+# PC_WRITE= 1,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 80211001,
+# PC= 0003
+# R1= 00000001,
+# R2= 00000000,
+# R3= 00000000,
+# R4= 00000000,
+# R5= 00000000,
+# R6= 00000000,
+# ALU_OP= 2,
+# BR_SEL= 0,
+# PC_WRITE= 0,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 80211001,
+# PC= 0003
+# R1= 00000001,
+# R2= 00000000,
+# R3= 00000000,
+# R4= 00000000,
+# R5= 00000000,
+# R6= 00000000,
+# ALU_OP= 0,
+# BR_SEL= 0,
+# PC_WRITE= 0,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 80211001,
+# PC= 0003
+# R1= 00000001,
+# R2= 00000000,
+# R3= 00000000,
+# R4= 00000000,
+# R5= 00000000,
+# R6= 00000000,
+# ALU_OP= 2,
+# BR_SEL= 0,
+# PC_WRITE= 0,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 80211001,
+# PC= 0003
+# R1= 00000001,
+# R2= 00000002,
+# R3= 00000000,
+# R4= 00000000,
+# R5= 00000000,
+# R6= 00000000,
+# ALU_OP= 2,
+# BR_SEL= 0,
+# PC_WRITE= 1,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 8032200b,
+# PC= 0004
+# R1= 00000001,
+# R2= 00000002,
+# R3= 00000000,
+# R4= 00000000,
+# R5= 00000000,
+# R6= 00000000,
+# ALU_OP= 2,
+# BR_SEL= 0,
+# PC_WRITE= 0,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 8032200b,
+# PC= 0004
+# R1= 00000001,
+# R2= 00000002,
+# R3= 00000000,
+# R4= 00000000,
+# R5= 00000000,
+# R6= 00000000,
+# ALU_OP= 0,
+# BR_SEL= 0,
+# PC_WRITE= 0,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 8032200b,
+# PC= 0004
+# R1= 00000001,
+# R2= 00000002,
+# R3= 00000000,
+# R4= 00000000,
+# R5= 00000000,
+# R6= 00000000,
+# ALU_OP= 2,
+# BR_SEL= 0,
+# PC_WRITE= 0,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 8032200b,
+# PC= 0004
+# R1= 00000001,
+# R2= 00000002,
+# R3= 00000008,
+# R4= 00000000,
+# R5= 00000000,
+# R6= 00000000,
+# ALU_OP= 2,
+# BR_SEL= 0,
+# PC_WRITE= 1,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 80412002,
+# PC= 0005
+# R1= 00000001,
+# R2= 00000002,
+# R3= 00000008,
+# R4= 00000000,
+# R5= 00000000,
+# R6= 00000000,
+# ALU_OP= 2,
+# BR_SEL= 0,
+# PC_WRITE= 0,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 80412002,
+# PC= 0005
+# R1= 00000001,
+# R2= 00000002,
+# R3= 00000008,
+# R4= 00000000,
+# R5= 00000000,
+# R6= 00000000,
+# ALU_OP= 0,
+# BR_SEL= 0,
+# PC_WRITE= 0,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 80412002,
+# PC= 0005
+# R1= 00000001,
+# R2= 00000002,
+# R3= 00000008,
+# R4= 00000000,
+# R5= 00000000,
+# R6= 00000000,
+# ALU_OP= 2,
+# BR_SEL= 0,
+# PC_WRITE= 0,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 80412002,
+# PC= 0005
+# R1= 00000001,
+# R2= 00000002,
+# R3= 00000008,
+# R4= ffffffff,
+# R5= 00000000,
+# R6= 00000000,
+# ALU_OP= 2,
+# BR_SEL= 0,
+# PC_WRITE= 1,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 8044300a,
+# PC= 0006
+# R1= 00000001,
+# R2= 00000002,
+# R3= 00000008,
+# R4= ffffffff,
+# R5= 00000000,
+# R6= 00000000,
+# ALU_OP= 2,
+# BR_SEL= 0,
+# PC_WRITE= 0,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 8044300a,
+# PC= 0006
+# R1= 00000001,
+# R2= 00000002,
+# R3= 00000008,
+# R4= ffffffff,
+# R5= 00000000,
+# R6= 00000000,
+# ALU_OP= 0,
+# BR_SEL= 0,
+# PC_WRITE= 0,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 8044300a,
+# PC= 0006
+# R1= 00000001,
+# R2= 00000002,
+# R3= 00000008,
+# R4= ffffffff,
+# R5= 00000000,
+# R6= 00000000,
+# ALU_OP= 2,
+# BR_SEL= 0,
+# PC_WRITE= 0,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 8044300a,
+# PC= 0006
+# R1= 00000001,
+# R2= 00000002,
+# R3= 00000008,
+# R4= 00ffffff,
+# R5= 00000000,
+# R6= 00000000,
+# ALU_OP= 2,
+# BR_SEL= 0,
+# PC_WRITE= 1,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 80234007,
+# PC= 0007
+# R1= 00000001,
+# R2= 00000002,
+# R3= 00000008,
+# R4= 00ffffff,
+# R5= 00000000,
+# R6= 00000000,
+# ALU_OP= 2,
+# BR_SEL= 0,
+# PC_WRITE= 0,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 80234007,
+# PC= 0007
+# R1= 00000001,
+# R2= 00000002,
+# R3= 00000008,
+# R4= 00ffffff,
+# R5= 00000000,
+# R6= 00000000,
+# ALU_OP= 0,
+# BR_SEL= 0,
+# PC_WRITE= 0,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 80234007,
+# PC= 0007
+# R1= 00000001,
+# R2= 00000002,
+# R3= 00000008,
+# R4= 00ffffff,
+# R5= 00000000,
+# R6= 00000000,
+# ALU_OP= 2,
+# BR_SEL= 0,
+# PC_WRITE= 0,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 80234007,
+# PC= 0007
+# R1= 00000001,
+# R2= 00fffff7,
+# R3= 00000008,
+# R4= 00ffffff,
+# R5= 00000000,
+# R6= 00000000,
+# ALU_OP= 2,
+# BR_SEL= 0,
+# PC_WRITE= 1,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 80220004,
+# PC= 0008
+# R1= 00000001,
+# R2= 00fffff7,
+# R3= 00000008,
+# R4= 00ffffff,
+# R5= 00000000,
+# R6= 00000000,
+# ALU_OP= 2,
+# BR_SEL= 0,
+# PC_WRITE= 0,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 80220004,
+# PC= 0008
+# R1= 00000001,
+# R2= 00fffff7,
+# R3= 00000008,
+# R4= 00ffffff,
+# R5= 00000000,
+# R6= 00000000,
+# ALU_OP= 0,
+# BR_SEL= 0,
+# PC_WRITE= 0,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 80220004,
+# PC= 0008
+# R1= 00000001,
+# R2= 00fffff7,
+# R3= 00000008,
+# R4= 00ffffff,
+# R5= 00000000,
+# R6= 00000000,
+# ALU_OP= 2,
+# BR_SEL= 0,
+# PC_WRITE= 0,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 80220004,
+# PC= 0008
+# R1= 00000001,
+# R2= ff000008,
+# R3= 00000008,
+# R4= 00ffffff,
+# R5= 00000000,
+# R6= 00000000,
+# ALU_OP= 2,
+# BR_SEL= 0,
+# PC_WRITE= 1,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 80421009,
+# PC= 0009
+# R1= 00000001,
+# R2= ff000008,
+# R3= 00000008,
+# R4= 00ffffff,
+# R5= 00000000,
+# R6= 00000000,
+# ALU_OP= 2,
+# BR_SEL= 0,
+# PC_WRITE= 0,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 80421009,
+# PC= 0009
+# R1= 00000001,
+# R2= ff000008,
+# R3= 00000008,
+# R4= 00ffffff,
+# R5= 00000000,
+# R6= 00000000,
+# ALU_OP= 0,
+# BR_SEL= 0,
+# PC_WRITE= 0,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 80421009,
+# PC= 0009
+# R1= 00000001,
+# R2= ff000008,
+# R3= 00000008,
+# R4= 00ffffff,
+# R5= 00000000,
+# R6= 00000000,
+# ALU_OP= 2,
+# BR_SEL= 0,
+# PC_WRITE= 0,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 80421009,
+# PC= 0009
+# R1= 00000001,
+# R2= ff000008,
+# R3= 00000008,
+# R4= fe000011,
+# R5= 00000000,
+# R6= 00000000,
+# ALU_OP= 2,
+# BR_SEL= 0,
+# PC_WRITE= 1,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 80524005,
+# PC= 000a
+# R1= 00000001,
+# R2= ff000008,
+# R3= 00000008,
+# R4= fe000011,
+# R5= 00000000,
+# R6= 00000000,
+# ALU_OP= 2,
+# BR_SEL= 0,
+# PC_WRITE= 0,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 80524005,
+# PC= 000a
+# R1= 00000001,
+# R2= ff000008,
+# R3= 00000008,
+# R4= fe000011,
+# R5= 00000000,
+# R6= 00000000,
+# ALU_OP= 0,
+# BR_SEL= 0,
+# PC_WRITE= 0,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 80524005,
+# PC= 000a
+# R1= 00000001,
+# R2= ff000008,
+# R3= 00000008,
+# R4= fe000011,
+# R5= 00000000,
+# R6= 00000000,
+# ALU_OP= 2,
+# BR_SEL= 0,
+# PC_WRITE= 0,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 80524005,
+# PC= 000a
+# R1= 00000001,
+# R2= ff000008,
+# R3= 00000008,
+# R4= fe000011,
+# R5= ff000019,
+# R6= 00000000,
+# ALU_OP= 2,
+# BR_SEL= 0,
+# PC_WRITE= 1,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 80324006,
+# PC= 000b
+# R1= 00000001,
+# R2= ff000008,
+# R3= 00000008,
+# R4= fe000011,
+# R5= ff000019,
+# R6= 00000000,
+# ALU_OP= 2,
+# BR_SEL= 0,
+# PC_WRITE= 0,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 80324006,
+# PC= 000b
+# R1= 00000001,
+# R2= ff000008,
+# R3= 00000008,
+# R4= fe000011,
+# R5= ff000019,
+# R6= 00000000,
+# ALU_OP= 0,
+# BR_SEL= 0,
+# PC_WRITE= 0,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 80324006,
+# PC= 000b
+# R1= 00000001,
+# R2= ff000008,
+# R3= 00000008,
+# R4= fe000011,
+# R5= ff000019,
+# R6= 00000000,
+# ALU_OP= 2,
+# BR_SEL= 0,
+# PC_WRITE= 0,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 80324006,
+# PC= 000b
+# R1= 00000001,
+# R2= ff000008,
+# R3= fe000000,
+# R4= fe000011,
+# R5= ff000019,
+# R6= 00000000,
+# ALU_OP= 2,
+# BR_SEL= 0,
+# PC_WRITE= 1,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 00000000,
+# PC= 000c
+# R1= 00000001,
+# R2= ff000008,
+# R3= fe000000,
+# R4= fe000011,
+# R5= ff000019,
+# R6= 00000000,
+# ALU_OP= 2,
+# BR_SEL= 0,
+# PC_WRITE= 0,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 00000000,
+# PC= 000c
+# R1= 00000001,
+# R2= ff000008,
+# R3= fe000000,
+# R4= fe000011,
+# R5= ff000019,
+# R6= 00000000,
+# ALU_OP= 2,
+# BR_SEL= 0,
+# PC_WRITE= 1,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 88100001,
+# PC= 000d
+# R1= 00000001,
+# R2= ff000008,
+# R3= fe000000,
+# R4= fe000011,
+# R5= ff000019,
+# R6= 00000000,
+# ALU_OP= 2,
+# BR_SEL= 0,
+# PC_WRITE= 0,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 88100001,
+# PC= 000d
+# R1= 00000001,
+# R2= ff000008,
+# R3= fe000000,
+# R4= fe000011,
+# R5= ff000019,
+# R6= 00000000,
+# ALU_OP= 1,
+# BR_SEL= 0,
+# PC_WRITE= 0,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 88100001,
+# PC= 000d
+# R1= 00000001,
+# R2= ff000008,
+# R3= fe000000,
+# R4= fe000011,
+# R5= ff000019,
+# R6= 00000000,
+# ALU_OP= 2,
+# BR_SEL= 0,
+# PC_WRITE= 0,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 88100001,
+# PC= 000d
+# R1= 00000001,
+# R2= ff000008,
+# R3= fe000000,
+# R4= fe000011,
+# R5= ff000019,
+# R6= 00000000,
+# ALU_OP= 2,
+# BR_SEL= 0,
+# PC_WRITE= 1,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 80211002,
+# PC= 000e
+# R1= 00000001,
+# R2= ff000008,
+# R3= fe000000,
+# R4= fe000011,
+# R5= ff000019,
+# R6= 00000000,
+# ALU_OP= 2,
+# BR_SEL= 0,
+# PC_WRITE= 0,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 80211002,
+# PC= 000e
+# R1= 00000001,
+# R2= ff000008,
+# R3= fe000000,
+# R4= fe000011,
+# R5= ff000019,
+# R6= 00000000,
+# ALU_OP= 0,
+# BR_SEL= 0,
+# PC_WRITE= 0,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 80211002,
+# PC= 000e
+# R1= 00000001,
+# R2= ff000008,
+# R3= fe000000,
+# R4= fe000011,
+# R5= ff000019,
+# R6= 00000000,
+# ALU_OP= 2,
+# BR_SEL= 0,
+# PC_WRITE= 0,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 80211002,
+# PC= 000e
+# R1= 00000001,
+# R2= 00000000,
+# R3= fe000000,
+# R4= fe000011,
+# R5= ff000019,
+# R6= 00000000,
+# ALU_OP= 2,
+# BR_SEL= 0,
+# PC_WRITE= 1,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 80201002,
+# PC= 000f
+# R1= 00000001,
+# R2= 00000000,
+# R3= fe000000,
+# R4= fe000011,
+# R5= ff000019,
+# R6= 00000000,
+# ALU_OP= 2,
+# BR_SEL= 0,
+# PC_WRITE= 0,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 80201002,
+# PC= 000f
+# R1= 00000001,
+# R2= 00000000,
+# R3= fe000000,
+# R4= fe000011,
+# R5= ff000019,
+# R6= 00000000,
+# ALU_OP= 0,
+# BR_SEL= 0,
+# PC_WRITE= 0,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 80201002,
+# PC= 000f
+# R1= 00000001,
+# R2= 00000000,
+# R3= fe000000,
+# R4= fe000011,
+# R5= ff000019,
+# R6= 00000000,
+# ALU_OP= 2,
+# BR_SEL= 0,
+# PC_WRITE= 0,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 80201002,
+# PC= 000f
+# R1= 00000001,
+# R2= ffffffff,
+# R3= fe000000,
+# R4= fe000011,
+# R5= ff000019,
+# R6= 00000000,
+# ALU_OP= 2,
+# BR_SEL= 0,
+# PC_WRITE= 1,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 80311008,
+# PC= 0010
+# R1= 00000001,
+# R2= ffffffff,
+# R3= fe000000,
+# R4= fe000011,
+# R5= ff000019,
+# R6= 00000000,
+# ALU_OP= 2,
+# BR_SEL= 0,
+# PC_WRITE= 0,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 80311008,
+# PC= 0010
+# R1= 00000001,
+# R2= ffffffff,
+# R3= fe000000,
+# R4= fe000011,
+# R5= ff000019,
+# R6= 00000000,
+# ALU_OP= 0,
+# BR_SEL= 0,
+# PC_WRITE= 0,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 80311008,
+# PC= 0010
+# R1= 00000001,
+# R2= ffffffff,
+# R3= fe000000,
+# R4= fe000011,
+# R5= ff000019,
+# R6= 00000000,
+# ALU_OP= 2,
+# BR_SEL= 0,
+# PC_WRITE= 0,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 80311008,
+# PC= 0010
+# R1= 00000001,
+# R2= ffffffff,
+# R3= 80000000,
+# R4= fe000011,
+# R5= ff000019,
+# R6= 00000000,
+# ALU_OP= 2,
+# BR_SEL= 0,
+# PC_WRITE= 1,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 80423001,
+# PC= 0011
+# R1= 00000001,
+# R2= ffffffff,
+# R3= 80000000,
+# R4= fe000011,
+# R5= ff000019,
+# R6= 00000000,
+# ALU_OP= 2,
+# BR_SEL= 0,
+# PC_WRITE= 0,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 80423001,
+# PC= 0011
+# R1= 00000001,
+# R2= ffffffff,
+# R3= 80000000,
+# R4= fe000011,
+# R5= ff000019,
+# R6= 00000000,
+# ALU_OP= 0,
+# BR_SEL= 0,
+# PC_WRITE= 0,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 80423001,
+# PC= 0011
+# R1= 00000001,
+# R2= ffffffff,
+# R3= 80000000,
+# R4= fe000011,
+# R5= ff000019,
+# R6= 00000000,
+# ALU_OP= 2,
+# BR_SEL= 0,
+# PC_WRITE= 0,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 80423001,
+# PC= 0011
+# R1= 00000001,
+# R2= ffffffff,
+# R3= 80000000,
+# R4= 7fffffff,
+# R5= ff000019,
+# R6= 00000000,
+# ALU_OP= 2,
+# BR_SEL= 0,
+# PC_WRITE= 1,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 00000000,
+# PC= 0012
+# R1= 00000001,
+# R2= ffffffff,
+# R3= 80000000,
+# R4= 7fffffff,
+# R5= ff000019,
+# R6= 00000000,
+# ALU_OP= 2,
+# BR_SEL= 0,
+# PC_WRITE= 0,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 00000000,
+# PC= 0012
+# R1= 00000001,
+# R2= ffffffff,
+# R3= 80000000,
+# R4= 7fffffff,
+# R5= ff000019,
+# R6= 00000000,
+# ALU_OP= 2,
+# BR_SEL= 0,
+# PC_WRITE= 1,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 80400001,
+# PC= 0013
+# R1= 00000001,
+# R2= ffffffff,
+# R3= 80000000,
+# R4= 7fffffff,
+# R5= ff000019,
+# R6= 00000000,
+# ALU_OP= 2,
+# BR_SEL= 0,
+# PC_WRITE= 0,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 80400001,
+# PC= 0013
+# R1= 00000001,
+# R2= ffffffff,
+# R3= 80000000,
+# R4= 7fffffff,
+# R5= ff000019,
+# R6= 00000000,
+# ALU_OP= 0,
+# BR_SEL= 0,
+# PC_WRITE= 0,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 80400001,
+# PC= 0013
+# R1= 00000001,
+# R2= ffffffff,
+# R3= 80000000,
+# R4= 7fffffff,
+# R5= ff000019,
+# R6= 00000000,
+# ALU_OP= 2,
+# BR_SEL= 0,
+# PC_WRITE= 0,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 80400001,
+# PC= 0013
+# R1= 00000001,
+# R2= ffffffff,
+# R3= 80000000,
+# R4= 00000000,
+# R5= ff000019,
+# R6= 00000000,
+# ALU_OP= 2,
+# BR_SEL= 0,
+# PC_WRITE= 1,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 6100001d,
+# PC= 0014
+# R1= 00000001,
+# R2= ffffffff,
+# R3= 80000000,
+# R4= 00000000,
+# R5= ff000019,
+# R6= 00000000,
+# ALU_OP= 2,
+# BR_SEL= 1,
+# PC_WRITE= 0,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 6100001d,
+# PC= 0014
+# R1= 00000001,
+# R2= ffffffff,
+# R3= 80000000,
+# R4= 00000000,
+# R5= ff000019,
+# R6= 00000000,
+# ALU_OP= 2,
+# BR_SEL= 0,
+# PC_WRITE= 0,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 6100001d,
+# PC= 0014
+# R1= 00000001,
+# R2= ffffffff,
+# R3= 80000000,
+# R4= 00000000,
+# R5= ff000019,
+# R6= 00000000,
+# ALU_OP= 2,
+# BR_SEL= 0,
+# PC_WRITE= 1,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 88100001,
+# PC= 0015
+# R1= 00000001,
+# R2= ffffffff,
+# R3= 80000000,
+# R4= 00000000,
+# R5= ff000019,
+# R6= 00000000,
+# ALU_OP= 2,
+# BR_SEL= 0,
+# PC_WRITE= 0,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 88100001,
+# PC= 0015
+# R1= 00000001,
+# R2= ffffffff,
+# R3= 80000000,
+# R4= 00000000,
+# R5= ff000019,
+# R6= 00000000,
+# ALU_OP= 1,
+# BR_SEL= 0,
+# PC_WRITE= 0,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 88100001,
+# PC= 0015
+# R1= 00000001,
+# R2= ffffffff,
+# R3= 80000000,
+# R4= 00000000,
+# R5= ff000019,
+# R6= 00000000,
+# ALU_OP= 2,
+# BR_SEL= 0,
+# PC_WRITE= 0,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 88100001,
+# PC= 0015
+# R1= 00000001,
+# R2= ffffffff,
+# R3= 80000000,
+# R4= 00000000,
+# R5= ff000019,
+# R6= 00000000,
+# ALU_OP= 2,
+# BR_SEL= 0,
+# PC_WRITE= 1,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 88200004,
+# PC= 0016
+# R1= 00000001,
+# R2= ffffffff,
+# R3= 80000000,
+# R4= 00000000,
+# R5= ff000019,
+# R6= 00000000,
+# ALU_OP= 2,
+# BR_SEL= 0,
+# PC_WRITE= 0,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 88200004,
+# PC= 0016
+# R1= 00000001,
+# R2= ffffffff,
+# R3= 80000000,
+# R4= 00000000,
+# R5= ff000019,
+# R6= 00000000,
+# ALU_OP= 1,
+# BR_SEL= 0,
+# PC_WRITE= 0,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 88200004,
+# PC= 0016
+# R1= 00000001,
+# R2= ffffffff,
+# R3= 80000000,
+# R4= 00000000,
+# R5= ff000019,
+# R6= 00000000,
+# ALU_OP= 2,
+# BR_SEL= 0,
+# PC_WRITE= 0,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 88200004,
+# PC= 0016
+# R1= 00000001,
+# R2= 00000004,
+# R3= 80000000,
+# R4= 00000000,
+# R5= ff000019,
+# R6= 00000000,
+# ALU_OP= 2,
+# BR_SEL= 0,
+# PC_WRITE= 1,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 8822ffff,
+# PC= 0017
+# R1= 00000001,
+# R2= 00000004,
+# R3= 80000000,
+# R4= 00000000,
+# R5= ff000019,
+# R6= 00000000,
+# ALU_OP= 2,
+# BR_SEL= 0,
+# PC_WRITE= 0,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 8822ffff,
+# PC= 0017
+# R1= 00000001,
+# R2= 00000004,
+# R3= 80000000,
+# R4= 00000000,
+# R5= ff000019,
+# R6= 00000000,
+# ALU_OP= 1,
+# BR_SEL= 0,
+# PC_WRITE= 0,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 8822ffff,
+# PC= 0017
+# R1= 00000001,
+# R2= 00000004,
+# R3= 80000000,
+# R4= 00000000,
+# R5= ff000019,
+# R6= 00000000,
+# ALU_OP= 2,
+# BR_SEL= 0,
+# PC_WRITE= 0,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 8822ffff,
+# PC= 0017
+# R1= 00000001,
+# R2= 00000003,
+# R3= 80000000,
+# R4= 00000000,
+# R5= ff000019,
+# R6= 00000000,
+# ALU_OP= 2,
+# BR_SEL= 0,
+# PC_WRITE= 1,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 51000005,
+# PC= 0018
+# R1= 00000001,
+# R2= 00000003,
+# R3= 80000000,
+# R4= 00000000,
+# R5= ff000019,
+# R6= 00000000,
+# ALU_OP= 2,
+# BR_SEL= 0,
+# PC_WRITE= 0,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 51000005,
+# PC= 0018
+# R1= 00000001,
+# R2= 00000003,
+# R3= 80000000,
+# R4= 00000000,
+# R5= ff000019,
+# R6= 00000000,
+# ALU_OP= 2,
+# BR_SEL= 0,
+# PC_WRITE= 1,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 88320000,
+# PC= 0019
+# R1= 00000001,
+# R2= 00000003,
+# R3= 80000000,
+# R4= 00000000,
+# R5= ff000019,
+# R6= 00000000,
+# ALU_OP= 2,
+# BR_SEL= 0,
+# PC_WRITE= 0,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 88320000,
+# PC= 0019
+# R1= 00000001,
+# R2= 00000003,
+# R3= 80000000,
+# R4= 00000000,
+# R5= ff000019,
+# R6= 00000000,
+# ALU_OP= 1,
+# BR_SEL= 0,
+# PC_WRITE= 0,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 88320000,
+# PC= 0019
+# R1= 00000001,
+# R2= 00000003,
+# R3= 80000000,
+# R4= 00000000,
+# R5= ff000019,
+# R6= 00000000,
+# ALU_OP= 2,
+# BR_SEL= 0,
+# PC_WRITE= 0,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 88320000,
+# PC= 0019
+# R1= 00000001,
+# R2= 00000003,
+# R3= 00000003,
+# R4= 00000000,
+# R5= ff000019,
+# R6= 00000000,
+# ALU_OP= 2,
+# BR_SEL= 0,
+# PC_WRITE= 1,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 88440001,
+# PC= 001a
+# R1= 00000001,
+# R2= 00000003,
+# R3= 00000003,
+# R4= 00000000,
+# R5= ff000019,
+# R6= 00000000,
+# ALU_OP= 2,
+# BR_SEL= 0,
+# PC_WRITE= 0,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 88440001,
+# PC= 001a
+# R1= 00000001,
+# R2= 00000003,
+# R3= 00000003,
+# R4= 00000000,
+# R5= ff000019,
+# R6= 00000000,
+# ALU_OP= 1,
+# BR_SEL= 0,
+# PC_WRITE= 0,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 88440001,
+# PC= 001a
+# R1= 00000001,
+# R2= 00000003,
+# R3= 00000003,
+# R4= 00000000,
+# R5= ff000019,
+# R6= 00000000,
+# ALU_OP= 2,
+# BR_SEL= 0,
+# PC_WRITE= 0,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 88440001,
+# PC= 001a
+# R1= 00000001,
+# R2= 00000003,
+# R3= 00000003,
+# R4= 00000001,
+# R5= ff000019,
+# R6= 00000000,
+# ALU_OP= 2,
+# BR_SEL= 0,
+# PC_WRITE= 1,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 80331002,
+# PC= 001b
+# R1= 00000001,
+# R2= 00000003,
+# R3= 00000003,
+# R4= 00000001,
+# R5= ff000019,
+# R6= 00000000,
+# ALU_OP= 2,
+# BR_SEL= 0,
+# PC_WRITE= 0,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 80331002,
+# PC= 001b
+# R1= 00000001,
+# R2= 00000003,
+# R3= 00000003,
+# R4= 00000001,
+# R5= ff000019,
+# R6= 00000000,
+# ALU_OP= 0,
+# BR_SEL= 0,
+# PC_WRITE= 0,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 80331002,
+# PC= 001b
+# R1= 00000001,
+# R2= 00000003,
+# R3= 00000003,
+# R4= 00000001,
+# R5= ff000019,
+# R6= 00000000,
+# ALU_OP= 2,
+# BR_SEL= 0,
+# PC_WRITE= 0,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 80331002,
+# PC= 001b
+# R1= 00000001,
+# R2= 00000003,
+# R3= 00000002,
+# R4= 00000001,
+# R5= ff000019,
+# R6= 00000000,
+# ALU_OP= 2,
+# BR_SEL= 0,
+# PC_WRITE= 1,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 7100fffd,
+# PC= 001c
+# R1= 00000001,
+# R2= 00000003,
+# R3= 00000002,
+# R4= 00000001,
+# R5= ff000019,
+# R6= 00000000,
+# ALU_OP= 2,
+# BR_SEL= 0,
+# PC_WRITE= 1,
+# PC_SEL= 1
+# Waiting for next change.
+# 
+# 
+# instr= 7100fffd,
+# PC= 0019
+# R1= 00000001,
+# R2= 00000003,
+# R3= 00000002,
+# R4= 00000001,
+# R5= ff000019,
+# R6= 00000000,
+# ALU_OP= 2,
+# BR_SEL= 0,
+# PC_WRITE= 0,
+# PC_SEL= 1
+# Waiting for next change.
+# 
+# 
+# instr= 7100fffd,
+# PC= 0019
+# R1= 00000001,
+# R2= 00000003,
+# R3= 00000002,
+# R4= 00000001,
+# R5= ff000019,
+# R6= 00000000,
+# ALU_OP= 2,
+# BR_SEL= 0,
+# PC_WRITE= 1,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 88440001,
+# PC= 001a
+# R1= 00000001,
+# R2= 00000003,
+# R3= 00000002,
+# R4= 00000001,
+# R5= ff000019,
+# R6= 00000000,
+# ALU_OP= 2,
+# BR_SEL= 0,
+# PC_WRITE= 0,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 88440001,
+# PC= 001a
+# R1= 00000001,
+# R2= 00000003,
+# R3= 00000002,
+# R4= 00000001,
+# R5= ff000019,
+# R6= 00000000,
+# ALU_OP= 1,
+# BR_SEL= 0,
+# PC_WRITE= 0,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 88440001,
+# PC= 001a
+# R1= 00000001,
+# R2= 00000003,
+# R3= 00000002,
+# R4= 00000001,
+# R5= ff000019,
+# R6= 00000000,
+# ALU_OP= 2,
+# BR_SEL= 0,
+# PC_WRITE= 0,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 88440001,
+# PC= 001a
+# R1= 00000001,
+# R2= 00000003,
+# R3= 00000002,
+# R4= 00000002,
+# R5= ff000019,
+# R6= 00000000,
+# ALU_OP= 2,
+# BR_SEL= 0,
+# PC_WRITE= 1,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 80331002,
+# PC= 001b
+# R1= 00000001,
+# R2= 00000003,
+# R3= 00000002,
+# R4= 00000002,
+# R5= ff000019,
+# R6= 00000000,
+# ALU_OP= 2,
+# BR_SEL= 0,
+# PC_WRITE= 0,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 80331002,
+# PC= 001b
+# R1= 00000001,
+# R2= 00000003,
+# R3= 00000002,
+# R4= 00000002,
+# R5= ff000019,
+# R6= 00000000,
+# ALU_OP= 0,
+# BR_SEL= 0,
+# PC_WRITE= 0,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 80331002,
+# PC= 001b
+# R1= 00000001,
+# R2= 00000003,
+# R3= 00000002,
+# R4= 00000002,
+# R5= ff000019,
+# R6= 00000000,
+# ALU_OP= 2,
+# BR_SEL= 0,
+# PC_WRITE= 0,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 80331002,
+# PC= 001b
+# R1= 00000001,
+# R2= 00000003,
+# R3= 00000001,
+# R4= 00000002,
+# R5= ff000019,
+# R6= 00000000,
+# ALU_OP= 2,
+# BR_SEL= 0,
+# PC_WRITE= 1,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 7100fffd,
+# PC= 001c
+# R1= 00000001,
+# R2= 00000003,
+# R3= 00000001,
+# R4= 00000002,
+# R5= ff000019,
+# R6= 00000000,
+# ALU_OP= 2,
+# BR_SEL= 0,
+# PC_WRITE= 1,
+# PC_SEL= 1
+# Waiting for next change.
+# 
+# 
+# instr= 7100fffd,
+# PC= 0019
+# R1= 00000001,
+# R2= 00000003,
+# R3= 00000001,
+# R4= 00000002,
+# R5= ff000019,
+# R6= 00000000,
+# ALU_OP= 2,
+# BR_SEL= 0,
+# PC_WRITE= 0,
+# PC_SEL= 1
+# Waiting for next change.
+# 
+# 
+# instr= 7100fffd,
+# PC= 0019
+# R1= 00000001,
+# R2= 00000003,
+# R3= 00000001,
+# R4= 00000002,
+# R5= ff000019,
+# R6= 00000000,
+# ALU_OP= 2,
+# BR_SEL= 0,
+# PC_WRITE= 1,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 88440001,
+# PC= 001a
+# R1= 00000001,
+# R2= 00000003,
+# R3= 00000001,
+# R4= 00000002,
+# R5= ff000019,
+# R6= 00000000,
+# ALU_OP= 2,
+# BR_SEL= 0,
+# PC_WRITE= 0,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 88440001,
+# PC= 001a
+# R1= 00000001,
+# R2= 00000003,
+# R3= 00000001,
+# R4= 00000002,
+# R5= ff000019,
+# R6= 00000000,
+# ALU_OP= 1,
+# BR_SEL= 0,
+# PC_WRITE= 0,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 88440001,
+# PC= 001a
+# R1= 00000001,
+# R2= 00000003,
+# R3= 00000001,
+# R4= 00000002,
+# R5= ff000019,
+# R6= 00000000,
+# ALU_OP= 2,
+# BR_SEL= 0,
+# PC_WRITE= 0,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 88440001,
+# PC= 001a
+# R1= 00000001,
+# R2= 00000003,
+# R3= 00000001,
+# R4= 00000003,
+# R5= ff000019,
+# R6= 00000000,
+# ALU_OP= 2,
+# BR_SEL= 0,
+# PC_WRITE= 1,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 80331002,
+# PC= 001b
+# R1= 00000001,
+# R2= 00000003,
+# R3= 00000001,
+# R4= 00000003,
+# R5= ff000019,
+# R6= 00000000,
+# ALU_OP= 2,
+# BR_SEL= 0,
+# PC_WRITE= 0,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 80331002,
+# PC= 001b
+# R1= 00000001,
+# R2= 00000003,
+# R3= 00000001,
+# R4= 00000003,
+# R5= ff000019,
+# R6= 00000000,
+# ALU_OP= 0,
+# BR_SEL= 0,
+# PC_WRITE= 0,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 80331002,
+# PC= 001b
+# R1= 00000001,
+# R2= 00000003,
+# R3= 00000001,
+# R4= 00000003,
+# R5= ff000019,
+# R6= 00000000,
+# ALU_OP= 2,
+# BR_SEL= 0,
+# PC_WRITE= 0,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 80331002,
+# PC= 001b
+# R1= 00000001,
+# R2= 00000003,
+# R3= 00000000,
+# R4= 00000003,
+# R5= ff000019,
+# R6= 00000000,
+# ALU_OP= 2,
+# BR_SEL= 0,
+# PC_WRITE= 1,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 7100fffd,
+# PC= 001c
+# R1= 00000001,
+# R2= 00000003,
+# R3= 00000000,
+# R4= 00000003,
+# R5= ff000019,
+# R6= 00000000,
+# ALU_OP= 2,
+# BR_SEL= 0,
+# PC_WRITE= 0,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 7100fffd,
+# PC= 001c
+# R1= 00000001,
+# R2= 00000003,
+# R3= 00000000,
+# R4= 00000003,
+# R5= ff000019,
+# R6= 00000000,
+# ALU_OP= 2,
+# BR_SEL= 0,
+# PC_WRITE= 1,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 60000016,
+# PC= 001d
+# R1= 00000001,
+# R2= 00000003,
+# R3= 00000000,
+# R4= 00000003,
+# R5= ff000019,
+# R6= 00000000,
+# ALU_OP= 2,
+# BR_SEL= 1,
+# PC_WRITE= 1,
+# PC_SEL= 1
+# Waiting for next change.
+# 
+# 
+# instr= 60000016,
+# PC= 0016
+# R1= 00000001,
+# R2= 00000003,
+# R3= 00000000,
+# R4= 00000003,
+# R5= ff000019,
+# R6= 00000000,
+# ALU_OP= 2,
+# BR_SEL= 0,
+# PC_WRITE= 0,
+# PC_SEL= 1
+# Waiting for next change.
+# 
+# 
+# instr= 60000016,
+# PC= 0016
+# R1= 00000001,
+# R2= 00000003,
+# R3= 00000000,
+# R4= 00000003,
+# R5= ff000019,
+# R6= 00000000,
+# ALU_OP= 2,
+# BR_SEL= 0,
+# PC_WRITE= 1,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 8822ffff,
+# PC= 0017
+# R1= 00000001,
+# R2= 00000003,
+# R3= 00000000,
+# R4= 00000003,
+# R5= ff000019,
+# R6= 00000000,
+# ALU_OP= 2,
+# BR_SEL= 0,
+# PC_WRITE= 0,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 8822ffff,
+# PC= 0017
+# R1= 00000001,
+# R2= 00000003,
+# R3= 00000000,
+# R4= 00000003,
+# R5= ff000019,
+# R6= 00000000,
+# ALU_OP= 1,
+# BR_SEL= 0,
+# PC_WRITE= 0,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 8822ffff,
+# PC= 0017
+# R1= 00000001,
+# R2= 00000003,
+# R3= 00000000,
+# R4= 00000003,
+# R5= ff000019,
+# R6= 00000000,
+# ALU_OP= 2,
+# BR_SEL= 0,
+# PC_WRITE= 0,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 8822ffff,
+# PC= 0017
+# R1= 00000001,
+# R2= 00000002,
+# R3= 00000000,
+# R4= 00000003,
+# R5= ff000019,
+# R6= 00000000,
+# ALU_OP= 2,
+# BR_SEL= 0,
+# PC_WRITE= 1,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 51000005,
+# PC= 0018
+# R1= 00000001,
+# R2= 00000002,
+# R3= 00000000,
+# R4= 00000003,
+# R5= ff000019,
+# R6= 00000000,
+# ALU_OP= 2,
+# BR_SEL= 0,
+# PC_WRITE= 0,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 51000005,
+# PC= 0018
+# R1= 00000001,
+# R2= 00000002,
+# R3= 00000000,
+# R4= 00000003,
+# R5= ff000019,
+# R6= 00000000,
+# ALU_OP= 2,
+# BR_SEL= 0,
+# PC_WRITE= 1,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 88320000,
+# PC= 0019
+# R1= 00000001,
+# R2= 00000002,
+# R3= 00000000,
+# R4= 00000003,
+# R5= ff000019,
+# R6= 00000000,
+# ALU_OP= 2,
+# BR_SEL= 0,
+# PC_WRITE= 0,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 88320000,
+# PC= 0019
+# R1= 00000001,
+# R2= 00000002,
+# R3= 00000000,
+# R4= 00000003,
+# R5= ff000019,
+# R6= 00000000,
+# ALU_OP= 1,
+# BR_SEL= 0,
+# PC_WRITE= 0,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 88320000,
+# PC= 0019
+# R1= 00000001,
+# R2= 00000002,
+# R3= 00000000,
+# R4= 00000003,
+# R5= ff000019,
+# R6= 00000000,
+# ALU_OP= 2,
+# BR_SEL= 0,
+# PC_WRITE= 0,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 88320000,
+# PC= 0019
+# R1= 00000001,
+# R2= 00000002,
+# R3= 00000002,
+# R4= 00000003,
+# R5= ff000019,
+# R6= 00000000,
+# ALU_OP= 2,
+# BR_SEL= 0,
+# PC_WRITE= 1,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 88440001,
+# PC= 001a
+# R1= 00000001,
+# R2= 00000002,
+# R3= 00000002,
+# R4= 00000003,
+# R5= ff000019,
+# R6= 00000000,
+# ALU_OP= 2,
+# BR_SEL= 0,
+# PC_WRITE= 0,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 88440001,
+# PC= 001a
+# R1= 00000001,
+# R2= 00000002,
+# R3= 00000002,
+# R4= 00000003,
+# R5= ff000019,
+# R6= 00000000,
+# ALU_OP= 1,
+# BR_SEL= 0,
+# PC_WRITE= 0,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 88440001,
+# PC= 001a
+# R1= 00000001,
+# R2= 00000002,
+# R3= 00000002,
+# R4= 00000003,
+# R5= ff000019,
+# R6= 00000000,
+# ALU_OP= 2,
+# BR_SEL= 0,
+# PC_WRITE= 0,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 88440001,
+# PC= 001a
+# R1= 00000001,
+# R2= 00000002,
+# R3= 00000002,
+# R4= 00000004,
+# R5= ff000019,
+# R6= 00000000,
+# ALU_OP= 2,
+# BR_SEL= 0,
+# PC_WRITE= 1,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 80331002,
+# PC= 001b
+# R1= 00000001,
+# R2= 00000002,
+# R3= 00000002,
+# R4= 00000004,
+# R5= ff000019,
+# R6= 00000000,
+# ALU_OP= 2,
+# BR_SEL= 0,
+# PC_WRITE= 0,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 80331002,
+# PC= 001b
+# R1= 00000001,
+# R2= 00000002,
+# R3= 00000002,
+# R4= 00000004,
+# R5= ff000019,
+# R6= 00000000,
+# ALU_OP= 0,
+# BR_SEL= 0,
+# PC_WRITE= 0,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 80331002,
+# PC= 001b
+# R1= 00000001,
+# R2= 00000002,
+# R3= 00000002,
+# R4= 00000004,
+# R5= ff000019,
+# R6= 00000000,
+# ALU_OP= 2,
+# BR_SEL= 0,
+# PC_WRITE= 0,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 80331002,
+# PC= 001b
+# R1= 00000001,
+# R2= 00000002,
+# R3= 00000001,
+# R4= 00000004,
+# R5= ff000019,
+# R6= 00000000,
+# ALU_OP= 2,
+# BR_SEL= 0,
+# PC_WRITE= 1,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 7100fffd,
+# PC= 001c
+# R1= 00000001,
+# R2= 00000002,
+# R3= 00000001,
+# R4= 00000004,
+# R5= ff000019,
+# R6= 00000000,
+# ALU_OP= 2,
+# BR_SEL= 0,
+# PC_WRITE= 1,
+# PC_SEL= 1
+# Waiting for next change.
+# 
+# 
+# instr= 7100fffd,
+# PC= 0019
+# R1= 00000001,
+# R2= 00000002,
+# R3= 00000001,
+# R4= 00000004,
+# R5= ff000019,
+# R6= 00000000,
+# ALU_OP= 2,
+# BR_SEL= 0,
+# PC_WRITE= 0,
+# PC_SEL= 1
+# Waiting for next change.
+# 
+# 
+# instr= 7100fffd,
+# PC= 0019
+# R1= 00000001,
+# R2= 00000002,
+# R3= 00000001,
+# R4= 00000004,
+# R5= ff000019,
+# R6= 00000000,
+# ALU_OP= 2,
+# BR_SEL= 0,
+# PC_WRITE= 1,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 88440001,
+# PC= 001a
+# R1= 00000001,
+# R2= 00000002,
+# R3= 00000001,
+# R4= 00000004,
+# R5= ff000019,
+# R6= 00000000,
+# ALU_OP= 2,
+# BR_SEL= 0,
+# PC_WRITE= 0,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 88440001,
+# PC= 001a
+# R1= 00000001,
+# R2= 00000002,
+# R3= 00000001,
+# R4= 00000004,
+# R5= ff000019,
+# R6= 00000000,
+# ALU_OP= 1,
+# BR_SEL= 0,
+# PC_WRITE= 0,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 88440001,
+# PC= 001a
+# R1= 00000001,
+# R2= 00000002,
+# R3= 00000001,
+# R4= 00000004,
+# R5= ff000019,
+# R6= 00000000,
+# ALU_OP= 2,
+# BR_SEL= 0,
+# PC_WRITE= 0,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 88440001,
+# PC= 001a
+# R1= 00000001,
+# R2= 00000002,
+# R3= 00000001,
+# R4= 00000005,
+# R5= ff000019,
+# R6= 00000000,
+# ALU_OP= 2,
+# BR_SEL= 0,
+# PC_WRITE= 1,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 80331002,
+# PC= 001b
+# R1= 00000001,
+# R2= 00000002,
+# R3= 00000001,
+# R4= 00000005,
+# R5= ff000019,
+# R6= 00000000,
+# ALU_OP= 2,
+# BR_SEL= 0,
+# PC_WRITE= 0,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 80331002,
+# PC= 001b
+# R1= 00000001,
+# R2= 00000002,
+# R3= 00000001,
+# R4= 00000005,
+# R5= ff000019,
+# R6= 00000000,
+# ALU_OP= 0,
+# BR_SEL= 0,
+# PC_WRITE= 0,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 80331002,
+# PC= 001b
+# R1= 00000001,
+# R2= 00000002,
+# R3= 00000001,
+# R4= 00000005,
+# R5= ff000019,
+# R6= 00000000,
+# ALU_OP= 2,
+# BR_SEL= 0,
+# PC_WRITE= 0,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 80331002,
+# PC= 001b
+# R1= 00000001,
+# R2= 00000002,
+# R3= 00000000,
+# R4= 00000005,
+# R5= ff000019,
+# R6= 00000000,
+# ALU_OP= 2,
+# BR_SEL= 0,
+# PC_WRITE= 1,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 7100fffd,
+# PC= 001c
+# R1= 00000001,
+# R2= 00000002,
+# R3= 00000000,
+# R4= 00000005,
+# R5= ff000019,
+# R6= 00000000,
+# ALU_OP= 2,
+# BR_SEL= 0,
+# PC_WRITE= 0,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 7100fffd,
+# PC= 001c
+# R1= 00000001,
+# R2= 00000002,
+# R3= 00000000,
+# R4= 00000005,
+# R5= ff000019,
+# R6= 00000000,
+# ALU_OP= 2,
+# BR_SEL= 0,
+# PC_WRITE= 1,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 60000016,
+# PC= 001d
+# R1= 00000001,
+# R2= 00000002,
+# R3= 00000000,
+# R4= 00000005,
+# R5= ff000019,
+# R6= 00000000,
+# ALU_OP= 2,
+# BR_SEL= 1,
+# PC_WRITE= 1,
+# PC_SEL= 1
+# Waiting for next change.
+# 
+# 
+# instr= 60000016,
+# PC= 0016
+# R1= 00000001,
+# R2= 00000002,
+# R3= 00000000,
+# R4= 00000005,
+# R5= ff000019,
+# R6= 00000000,
+# ALU_OP= 2,
+# BR_SEL= 0,
+# PC_WRITE= 0,
+# PC_SEL= 1
+# Waiting for next change.
+# 
+# 
+# instr= 60000016,
+# PC= 0016
+# R1= 00000001,
+# R2= 00000002,
+# R3= 00000000,
+# R4= 00000005,
+# R5= ff000019,
+# R6= 00000000,
+# ALU_OP= 2,
+# BR_SEL= 0,
+# PC_WRITE= 1,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 8822ffff,
+# PC= 0017
+# R1= 00000001,
+# R2= 00000002,
+# R3= 00000000,
+# R4= 00000005,
+# R5= ff000019,
+# R6= 00000000,
+# ALU_OP= 2,
+# BR_SEL= 0,
+# PC_WRITE= 0,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 8822ffff,
+# PC= 0017
+# R1= 00000001,
+# R2= 00000002,
+# R3= 00000000,
+# R4= 00000005,
+# R5= ff000019,
+# R6= 00000000,
+# ALU_OP= 1,
+# BR_SEL= 0,
+# PC_WRITE= 0,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 8822ffff,
+# PC= 0017
+# R1= 00000001,
+# R2= 00000002,
+# R3= 00000000,
+# R4= 00000005,
+# R5= ff000019,
+# R6= 00000000,
+# ALU_OP= 2,
+# BR_SEL= 0,
+# PC_WRITE= 0,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 8822ffff,
+# PC= 0017
+# R1= 00000001,
+# R2= 00000001,
+# R3= 00000000,
+# R4= 00000005,
+# R5= ff000019,
+# R6= 00000000,
+# ALU_OP= 2,
+# BR_SEL= 0,
+# PC_WRITE= 1,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 51000005,
+# PC= 0018
+# R1= 00000001,
+# R2= 00000001,
+# R3= 00000000,
+# R4= 00000005,
+# R5= ff000019,
+# R6= 00000000,
+# ALU_OP= 2,
+# BR_SEL= 0,
+# PC_WRITE= 0,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 51000005,
+# PC= 0018
+# R1= 00000001,
+# R2= 00000001,
+# R3= 00000000,
+# R4= 00000005,
+# R5= ff000019,
+# R6= 00000000,
+# ALU_OP= 2,
+# BR_SEL= 0,
+# PC_WRITE= 1,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 88320000,
+# PC= 0019
+# R1= 00000001,
+# R2= 00000001,
+# R3= 00000000,
+# R4= 00000005,
+# R5= ff000019,
+# R6= 00000000,
+# ALU_OP= 2,
+# BR_SEL= 0,
+# PC_WRITE= 0,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 88320000,
+# PC= 0019
+# R1= 00000001,
+# R2= 00000001,
+# R3= 00000000,
+# R4= 00000005,
+# R5= ff000019,
+# R6= 00000000,
+# ALU_OP= 1,
+# BR_SEL= 0,
+# PC_WRITE= 0,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 88320000,
+# PC= 0019
+# R1= 00000001,
+# R2= 00000001,
+# R3= 00000000,
+# R4= 00000005,
+# R5= ff000019,
+# R6= 00000000,
+# ALU_OP= 2,
+# BR_SEL= 0,
+# PC_WRITE= 0,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 88320000,
+# PC= 0019
+# R1= 00000001,
+# R2= 00000001,
+# R3= 00000001,
+# R4= 00000005,
+# R5= ff000019,
+# R6= 00000000,
+# ALU_OP= 2,
+# BR_SEL= 0,
+# PC_WRITE= 1,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 88440001,
+# PC= 001a
+# R1= 00000001,
+# R2= 00000001,
+# R3= 00000001,
+# R4= 00000005,
+# R5= ff000019,
+# R6= 00000000,
+# ALU_OP= 2,
+# BR_SEL= 0,
+# PC_WRITE= 0,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 88440001,
+# PC= 001a
+# R1= 00000001,
+# R2= 00000001,
+# R3= 00000001,
+# R4= 00000005,
+# R5= ff000019,
+# R6= 00000000,
+# ALU_OP= 1,
+# BR_SEL= 0,
+# PC_WRITE= 0,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 88440001,
+# PC= 001a
+# R1= 00000001,
+# R2= 00000001,
+# R3= 00000001,
+# R4= 00000005,
+# R5= ff000019,
+# R6= 00000000,
+# ALU_OP= 2,
+# BR_SEL= 0,
+# PC_WRITE= 0,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 88440001,
+# PC= 001a
+# R1= 00000001,
+# R2= 00000001,
+# R3= 00000001,
+# R4= 00000006,
+# R5= ff000019,
+# R6= 00000000,
+# ALU_OP= 2,
+# BR_SEL= 0,
+# PC_WRITE= 1,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 80331002,
+# PC= 001b
+# R1= 00000001,
+# R2= 00000001,
+# R3= 00000001,
+# R4= 00000006,
+# R5= ff000019,
+# R6= 00000000,
+# ALU_OP= 2,
+# BR_SEL= 0,
+# PC_WRITE= 0,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 80331002,
+# PC= 001b
+# R1= 00000001,
+# R2= 00000001,
+# R3= 00000001,
+# R4= 00000006,
+# R5= ff000019,
+# R6= 00000000,
+# ALU_OP= 0,
+# BR_SEL= 0,
+# PC_WRITE= 0,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 80331002,
+# PC= 001b
+# R1= 00000001,
+# R2= 00000001,
+# R3= 00000001,
+# R4= 00000006,
+# R5= ff000019,
+# R6= 00000000,
+# ALU_OP= 2,
+# BR_SEL= 0,
+# PC_WRITE= 0,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 80331002,
+# PC= 001b
+# R1= 00000001,
+# R2= 00000001,
+# R3= 00000000,
+# R4= 00000006,
+# R5= ff000019,
+# R6= 00000000,
+# ALU_OP= 2,
+# BR_SEL= 0,
+# PC_WRITE= 1,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 7100fffd,
+# PC= 001c
+# R1= 00000001,
+# R2= 00000001,
+# R3= 00000000,
+# R4= 00000006,
+# R5= ff000019,
+# R6= 00000000,
+# ALU_OP= 2,
+# BR_SEL= 0,
+# PC_WRITE= 0,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 7100fffd,
+# PC= 001c
+# R1= 00000001,
+# R2= 00000001,
+# R3= 00000000,
+# R4= 00000006,
+# R5= ff000019,
+# R6= 00000000,
+# ALU_OP= 2,
+# BR_SEL= 0,
+# PC_WRITE= 1,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 60000016,
+# PC= 001d
+# R1= 00000001,
+# R2= 00000001,
+# R3= 00000000,
+# R4= 00000006,
+# R5= ff000019,
+# R6= 00000000,
+# ALU_OP= 2,
+# BR_SEL= 1,
+# PC_WRITE= 1,
+# PC_SEL= 1
+# Waiting for next change.
+# 
+# 
+# instr= 60000016,
+# PC= 0016
+# R1= 00000001,
+# R2= 00000001,
+# R3= 00000000,
+# R4= 00000006,
+# R5= ff000019,
+# R6= 00000000,
+# ALU_OP= 2,
+# BR_SEL= 0,
+# PC_WRITE= 0,
+# PC_SEL= 1
+# Waiting for next change.
+# 
+# 
+# instr= 60000016,
+# PC= 0016
+# R1= 00000001,
+# R2= 00000001,
+# R3= 00000000,
+# R4= 00000006,
+# R5= ff000019,
+# R6= 00000000,
+# ALU_OP= 2,
+# BR_SEL= 0,
+# PC_WRITE= 1,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 8822ffff,
+# PC= 0017
+# R1= 00000001,
+# R2= 00000001,
+# R3= 00000000,
+# R4= 00000006,
+# R5= ff000019,
+# R6= 00000000,
+# ALU_OP= 2,
+# BR_SEL= 0,
+# PC_WRITE= 0,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 8822ffff,
+# PC= 0017
+# R1= 00000001,
+# R2= 00000001,
+# R3= 00000000,
+# R4= 00000006,
+# R5= ff000019,
+# R6= 00000000,
+# ALU_OP= 1,
+# BR_SEL= 0,
+# PC_WRITE= 0,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 8822ffff,
+# PC= 0017
+# R1= 00000001,
+# R2= 00000001,
+# R3= 00000000,
+# R4= 00000006,
+# R5= ff000019,
+# R6= 00000000,
+# ALU_OP= 2,
+# BR_SEL= 0,
+# PC_WRITE= 0,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 8822ffff,
+# PC= 0017
+# R1= 00000001,
+# R2= 00000000,
+# R3= 00000000,
+# R4= 00000006,
+# R5= ff000019,
+# R6= 00000000,
+# ALU_OP= 2,
+# BR_SEL= 0,
+# PC_WRITE= 1,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= 51000005,
+# PC= 0018
+# R1= 00000001,
+# R2= 00000000,
+# R3= 00000000,
+# R4= 00000006,
+# R5= ff000019,
+# R6= 00000000,
+# ALU_OP= 2,
+# BR_SEL= 0,
+# PC_WRITE= 1,
+# PC_SEL= 1
+# Waiting for next change.
+# 
+# 
+# instr= 51000005,
+# PC= 001d
+# R1= 00000001,
+# R2= 00000000,
+# R3= 00000000,
+# R4= 00000006,
+# R5= ff000019,
+# R6= 00000000,
+# ALU_OP= 2,
+# BR_SEL= 0,
+# PC_WRITE= 0,
+# PC_SEL= 1
+# Waiting for next change.
+# 
+# 
+# instr= 51000005,
+# PC= 001d
+# R1= 00000001,
+# R2= 00000000,
+# R3= 00000000,
+# R4= 00000006,
+# R5= ff000019,
+# R6= 00000000,
+# ALU_OP= 2,
+# BR_SEL= 0,
+# PC_WRITE= 1,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# 
+# instr= f0000000,
+# PC= 001e
+# R1= 00000001,
+# R2= 00000000,
+# R3= 00000000,
+# R4= 00000006,
+# R5= ff000019,
+# R6= 00000000,
+# ALU_OP= 2,
+# BR_SEL= 0,
+# PC_WRITE= 0,
+# PC_SEL= 0
+# Waiting for next change.
+# 
+# Halt.
+
+
+
