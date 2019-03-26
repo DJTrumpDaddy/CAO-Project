@@ -68,7 +68,6 @@ module ctrl (clk, rst_f, opcode, mm, stat, rf_we, alu_op, wb_sel, br_sel, pc_sel
 		wb_sel <= 0;		
 		br_sel <= 0;
 		pc_rst <= 0; 
-		pc_sel <= 0;
 		pc_write <= 0;
 		alu_op <= 2'b10;
 
@@ -90,7 +89,7 @@ module ctrl (clk, rst_f, opcode, mm, stat, rf_we, alu_op, wb_sel, br_sel, pc_sel
 			fetch:
 			begin
 				ir_load <= 1; // load instruction register
-				pc_sel <= 0; // increment pc_in
+				pc_sel <= 0;
 				pc_write <= 1; // write pc_out <= pc_in
 			end
 
@@ -102,7 +101,7 @@ module ctrl (clk, rst_f, opcode, mm, stat, rf_we, alu_op, wb_sel, br_sel, pc_sel
 					br_sel <= 0;
 				end
 
-				if((opcode == BNE || opcode == BNR) && (stat & mm) == 4'b0000 || (opcode == BRA || opcode == BRR) != 4'b0000) begin
+				if((opcode == BNE || opcode == BNR) && (stat & mm) == 0 || (opcode == BRA || opcode == BRR) != 0) begin
 					pc_write <= 1;
 					pc_sel <= 1;
 				end else begin
@@ -116,7 +115,7 @@ module ctrl (clk, rst_f, opcode, mm, stat, rf_we, alu_op, wb_sel, br_sel, pc_sel
 					if(mm == 4'b1000) begin
 						alu_op <= 2'b01;
 					end else begin
-						alu_op <= 2'b00
+						alu_op <= 2'b00;
 					end
 				end
 			end
@@ -127,7 +126,7 @@ module ctrl (clk, rst_f, opcode, mm, stat, rf_we, alu_op, wb_sel, br_sel, pc_sel
 					if(mm == 4'b1000) begin
 						alu_op <= 2'b01;
 					end else begin
-						alu_op <= 2'b00
+						alu_op <= 2'b00;
 					end
 				end
 			end
@@ -139,7 +138,7 @@ module ctrl (clk, rst_f, opcode, mm, stat, rf_we, alu_op, wb_sel, br_sel, pc_sel
 					if(mm == 4'b1000) begin
 						alu_op <= 2'b01;
 					end else begin
-						alu_op <= 2'b00
+						alu_op <= 2'b00;
 					end
 					rf_we <= 1;
 				end
