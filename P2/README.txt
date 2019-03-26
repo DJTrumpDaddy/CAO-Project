@@ -11,7 +11,7 @@ In this version (part 2) we:
 
 -- instantiated new modules im.v, ir.v, pc.v, and br.v within the sisc.v module
 
--- greatly enhanced the readability and organization of the sisc.v module
+-- greatly enhanced the readability and organization of the sisc.v module as well as the ctrl.v module
 
 -- generated new monitor statements in the sisc.v module
 
