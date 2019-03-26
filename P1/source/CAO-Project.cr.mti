@@ -1,0 +1,105 @@
+C:/Users/logwood/Desktop/CAO-Project/mux4.v {1 {vlog -work work -stats=none C:/Users/logwood/Desktop/CAO-Project/mux4.v
+Model Technology ModelSim DE-64 vlog 10.7b Compiler 2018.06 Jun  8 2018
+-- Compiling module mux4
+
+Top level modules:
+	mux4
+
+} {} {}} C:/Users/logwood/Desktop/CAO-Project1/mux4.v {1 {vlog -work work -stats=none C:/Users/logwood/Desktop/CAO-Project1/mux4.v
+Model Technology ModelSim DE-64 vlog 10.7b Compiler 2018.06 Jun  8 2018
+-- Compiling module mux4
+
+Top level modules:
+	mux4
+
+} {} {}} C:/Users/logwood/Desktop/CAO-Project/rf.v {1 {vlog -work work -stats=none C:/Users/logwood/Desktop/CAO-Project/rf.v
+Model Technology ModelSim DE-64 vlog 10.7b Compiler 2018.06 Jun  8 2018
+-- Compiling module rf
+
+Top level modules:
+	rf
+
+} {} {}} C:/Users/logwood/Desktop/CAO-Project1/mux32.v {1 {vlog -work work -stats=none C:/Users/logwood/Desktop/CAO-Project1/mux32.v
+Model Technology ModelSim DE-64 vlog 10.7b Compiler 2018.06 Jun  8 2018
+-- Compiling module mux32
+
+Top level modules:
+	mux32
+
+} {} {}} C:/Users/logwood/Desktop/CAO-Project1/rf.v {1 {vlog -work work -stats=none C:/Users/logwood/Desktop/CAO-Project1/rf.v
+Model Technology ModelSim DE-64 vlog 10.7b Compiler 2018.06 Jun  8 2018
+-- Compiling module rf
+
+Top level modules:
+	rf
+
+} {} {}} C:/Users/logwood/Desktop/CAO-Project1/statreg.v {1 {vlog -work work -stats=none C:/Users/logwood/Desktop/CAO-Project1/statreg.v
+Model Technology ModelSim DE-64 vlog 10.7b Compiler 2018.06 Jun  8 2018
+-- Compiling module statreg
+
+Top level modules:
+	statreg
+
+} {} {}} C:/Users/logwood/Desktop/CAO-Project1/alu.v {1 {vlog -work work -stats=none C:/Users/logwood/Desktop/CAO-Project1/alu.v
+Model Technology ModelSim DE-64 vlog 10.7b Compiler 2018.06 Jun  8 2018
+-- Compiling module alu
+
+Top level modules:
+	alu
+
+} {} {}} C:/Users/logwood/Desktop/CAO-Project/ctrl.v {0 {vlog -work work -stats=none C:/Users/logwood/Desktop/CAO-Project/ctrl.v
+Model Technology ModelSim DE-64 vlog 10.7b Compiler 2018.06 Jun  8 2018
+-- Compiling module ctrl
+** Error: (vlog-13069) C:/Users/logwood/Desktop/CAO-Project/ctrl.v(37): near "=": syntax error, unexpected '=', expecting ++ or --.
+** Error: (vlog-13053) C:/Users/logwood/Desktop/CAO-Project/ctrl.v(38): near "'t": Illegal base specifier in numeric constant.
+** Error: (vlog-13057) C:/Users/logwood/Desktop/CAO-Project/ctrl.v(38): Expecting numeric digits.
+** Error: (vlog-13069) C:/Users/logwood/Desktop/CAO-Project/ctrl.v(56): near "/": syntax error, unexpected '/'.
+
+} {4.0 8.0} {}} C:/Users/logwood/Desktop/CAO-Project1/ctrl.v {1 {vlog -work work -stats=none C:/Users/logwood/Desktop/CAO-Project1/ctrl.v
+Model Technology ModelSim DE-64 vlog 10.7b Compiler 2018.06 Jun  8 2018
+-- Compiling module ctrl
+
+Top level modules:
+	ctrl
+
+} {} {}} C:/Users/logwood/Desktop/CAO-Project/sisc_tb_p1.v {1 {vlog -work work -stats=none C:/Users/logwood/Desktop/CAO-Project/sisc_tb_p1.v
+Model Technology ModelSim DE-64 vlog 10.7b Compiler 2018.06 Jun  8 2018
+-- Compiling module sisc_tb
+
+Top level modules:
+	sisc_tb
+
+} {} {}} C:/Users/logwood/Desktop/CAO-Project/mux32.v {1 {vlog -work work -stats=none C:/Users/logwood/Desktop/CAO-Project/mux32.v
+Model Technology ModelSim DE-64 vlog 10.7b Compiler 2018.06 Jun  8 2018
+-- Compiling module mux32
+
+Top level modules:
+	mux32
+
+} {} {}} C:/Users/logwood/Desktop/CAO-Project1/sisc_tb_p1.v {1 {vlog -work work -stats=none C:/Users/logwood/Desktop/CAO-Project1/sisc_tb_p1.v
+Model Technology ModelSim DE-64 vlog 10.7b Compiler 2018.06 Jun  8 2018
+-- Compiling module sisc_tb
+
+Top level modules:
+	sisc_tb
+
+} {} {}} C:/Users/logwood/Desktop/CAO-Project/alu.v {1 {vlog -work work -stats=none C:/Users/logwood/Desktop/CAO-Project/alu.v
+Model Technology ModelSim DE-64 vlog 10.7b Compiler 2018.06 Jun  8 2018
+-- Compiling module alu
+
+Top level modules:
+	alu
+
+} {} {}} C:/Users/logwood/Desktop/CAO-Project/sisc.v {0 {vlog -work work -stats=none C:/Users/logwood/Desktop/CAO-Project/sisc.v
+Model Technology ModelSim DE-64 vlog 10.7b Compiler 2018.06 Jun  8 2018
+-- Compiling module sisc
+** Error: (vlog-13069) C:/Users/logwood/Desktop/CAO-Project/sisc.v(24): near "endmodule": syntax error, unexpected endmodule.
+
+} {4.0 5.0} {}} C:/Users/logwood/Desktop/CAO-Project/statreg.v {1 {vlog -work work -stats=none C:/Users/logwood/Desktop/CAO-Project/statreg.v
+Model Technology ModelSim DE-64 vlog 10.7b Compiler 2018.06 Jun  8 2018
+-- Compiling module statreg
+
+Top level modules:
+	statreg
+
+} {} {}}

@@ -1,0 +1,9 @@
+HEY! LISTEN!
+
+This folder contains different versions (parts) of one project. 
+To see part 1, follow the rabbit hole down P1. 
+Looking for part 2? Head on down P2!
+
+Simple, right?
+
+You can ignore "reading_material", though. That's for our own convenience.
