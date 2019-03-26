@@ -10,15 +10,9 @@ module ctrl (clk, rst_f, opcode, mm, stat, rf_we, alu_op, wb_sel, br_sel, pc_sel
   	input clk, rst_f;
   	input[3:0] stat, opcode, mm;
 
-  	output rf_we, wb_sel, br_sel, pc_sel, ir_load, pc_write, pc_rst, rb_sel;
-  	output[1:0] alu_op;
+  	output reg rf_we, wb_sel, br_sel, pc_sel, ir_load, pc_write, pc_rst, rb_sel;
+  	output reg[1:0] alu_op;
 
-  	reg rf_we, wb_sel, br_sel, pc_sel, ir_load, pc_write, pc_rst, rb_sel;
-  	reg[1:0] alu_op;
-
-
-  
-  
   	// states
  	 parameter start0 = 0, start1 = 1, fetch = 2, decode = 3, execute = 4, mem = 5, writeback = 6;
    
@@ -72,7 +66,7 @@ module ctrl (clk, rst_f, opcode, mm, stat, rf_we, alu_op, wb_sel, br_sel, pc_sel
 		alu_op <= 2'b10;
 
 		if(opcode == NOOP) begin
-			pc_write <= 1;
+			pc_sel <= 0;
 		end
 
 		case(present_state)
@@ -132,14 +126,9 @@ module ctrl (clk, rst_f, opcode, mm, stat, rf_we, alu_op, wb_sel, br_sel, pc_sel
 			end
 				
 			writeback:
-			rb_sel <= 1;
 			begin
+				rb_sel <= 1;
 				if(opcode == ALU_OP) begin
-					if(mm == 4'b1000) begin
-						alu_op <= 2'b01;
-					end else begin
-						alu_op <= 2'b00;
-					end
 					rf_we <= 1;
 				end
 			end

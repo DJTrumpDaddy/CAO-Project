@@ -59,9 +59,9 @@ module sisc (clk, rst_f);
   
 // put a $monitor statement here.  
 
-    $monitor("\nir= %h,\nR1= %h,\nR2= %h,\nR3= %h,\nR4= %h,\nR5= %h,\nR6= %h,\nALU_OP= %h,\nWB_SEL= %h,\nRF_WE= %h,\nwrite_data= %h\nWaiting for next change.\n",
- ir, RegisterFile.ram_array[1], RegisterFile.ram_array[2],RegisterFile.ram_array[3], RegisterFile.ram_array[4],
- RegisterFile.ram_array[5], RegisterFile.ram_array[6], alu_op, wb_sel, rf_we, mux32_out);
+    $monitor("\ninstr= %h,\nPC= %h\nR1= %h,\nR2= %h,\nR3= %h,\nR4= %h,\nR5= %h,\nR6= %h,\nALU_OP= %h,\nBR_SEL= %h,\nPC_WRITE= %h,\nPC_SEL= %h\nWaiting for next change.\n",
+ instr, pc_out, RegisterFile.ram_array[1], RegisterFile.ram_array[2],RegisterFile.ram_array[3], RegisterFile.ram_array[4],
+ RegisterFile.ram_array[5], RegisterFile.ram_array[6], alu_op, br_sel, pc_write, pc_sel);
 
 
 
