@@ -1,0 +1,9 @@
+
+***Notes***
+
+General:
+- New modules since P2 are mux16, dm
+
+mux16:
+output <= 16-bit address specifiying read and write address (only one is chosen within dm)
+input <= when sel==0, 16 bits from ALU output (???WHICH PART OF ALU???) :: when sel==1, 16 bits from instruction

@@ -1,5 +1,5 @@
 // ECE:3350 SISC processor project
-// test bench for sisc processor, part 2
+// test bench for sisc processor, part 3
 
 `timescale 1ns/100ps  
 
