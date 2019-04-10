@@ -143,7 +143,7 @@ module ctrl (clk, rst_f, opcode, mm, stat, rf_we, alu_op, wb_sel, br_sel, pc_sel
 				end
 
 				if(opcode == STR)begin
-					bm_we <= 1;
+					dm_we <= 1;
 				end
 			end
 				
