@@ -64,6 +64,8 @@ module ctrl (clk, rst_f, opcode, mm, stat, rf_we, alu_op, wb_sel, br_sel, pc_sel
 		pc_rst <= 0; 
 		pc_write <= 0;
 		alu_op <= 2'b10;
+		mm_sel <= 0;
+		dm_we <= 0;
 
 		if(opcode == NOOP) begin
 			pc_sel <= 0;
@@ -110,6 +112,15 @@ module ctrl (clk, rst_f, opcode, mm, stat, rf_we, alu_op, wb_sel, br_sel, pc_sel
 						alu_op <= 2'b00;
 					end
 				end
+
+				/*new shit*/
+				if(opcode == LOD || opcode == STR)begin
+					if(mm == 4'b1000)begin
+						alu_op <= 2'b01;
+					end else begin
+						mm_sel <= 1;
+					end
+				end
 			end
 
 			mem:
@@ -121,13 +132,34 @@ module ctrl (clk, rst_f, opcode, mm, stat, rf_we, alu_op, wb_sel, br_sel, pc_sel
 						alu_op <= 2'b00;
 					end
 				end
+
+				/*new shit*/
+				if(opcode == LOD || opcode == STR) begin
+					if(mm == 4'b1000)begin
+						alu_op <= 2'b01;
+					end else begin
+						mm_sel <= 1;
+					end
+				end
+
+				if(opcode == STR)begin
+					bm_we <= 1;
+				end
 			end
 				
 			writeback:
 			begin
 				rb_sel <= 1;
-				if(opcode == ALU_OP) begin
+				if(opcode == ALU_OP || opcode == LOD) begin
 					rf_we <= 1;
+				end
+
+				/*new shit*/
+				if(opcode == LOD) begin
+					if(mm == 4'b0000) begin
+						mm_sel <= 1;
+					end
+					wb_sel <= 1;
 				end
 			end
 
