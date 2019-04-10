@@ -11,7 +11,7 @@ module sisc (clk, rst_f);
 
 /*ctrl.v outputs*/
   wire[1:0] alu_op; //ctrl.v output
-  wire rf_we, wb_sel, br_sel, pc_sel, ir_load, pc_write, pc_rst, rb_sel; //ctrl.v outputs
+  wire rf_we, wb_sel, br_sel, pc_sel, ir_load, pc_write, pc_rst, rb_sel, mm_sel, dm_we; //ctrl.v outputs
 
 /*alu outputs*/
   wire stat_en; //alu.v output 
@@ -27,12 +27,14 @@ module sisc (clk, rst_f);
   wire[15:0] pc_out; //pc.v outputs
   wire[31:0] read_data; // im.v outputs
   wire[15:0] br_addr; //br.v outputs
+  wire[15:0] mux16_out; //mux16.v outputs
+  wire[31:0] read_data; //dm.v outputs
   
 
 
 // component instantiation goes here
 
-  ctrl ControlUnit (clk, rst_f, instr[31:28] /*opcode*/, instr[27:24] /*mm*/, stat_out, rf_we, alu_op, wb_sel, br_sel, pc_sel, ir_load, pc_write, pc_rst, rb_sel);
+  ctrl ControlUnit (clk, rst_f, instr[31:28] /*opcode*/, instr[27:24] /*mm*/, stat_out, rf_we, alu_op, wb_sel, br_sel, pc_sel, ir_load, pc_write, pc_rst, rb_sel, mm_sel, dm_we);
   
   mux4 Mux4 (instr[15:12] /*in_a*/, instr[23:20] /*in_b*/, rb_sel, mux4_out);
   
@@ -40,7 +42,7 @@ module sisc (clk, rst_f);
   
   alu ArithmeticLogicUnit(clk, rsa, rsb, instr[15:0], alu_op, alu_result, stat, stat_en);
   
-  mux32 Mux32 (alu_result, 32'h0, wb_sel, mux32_out);
+  mux32 Mux32 (alu_result, read_data, wb_sel, mux32_out);
   
   statreg StatusRegister (clk, stat, stat_en, stat_out);
 
@@ -51,6 +53,10 @@ module sisc (clk, rst_f);
   pc ProgramCounter (clk, br_addr, pc_sel, pc_write, pc_rst, pc_out);
 
   br BranchCalculator (pc_out /*pc_inc*/, instr[15:0] /*imm*/, br_sel, br_addr);
+
+  mux16 Mux16 (alu_result[15:0] /*are these the correct bits???*/, instr[15:0], mm_sel, mux16_out);
+
+  dm DataMemory (mux16_out, mux16_out, rsb, dm_we, read_data);
   
                
   
