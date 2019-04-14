@@ -3,15 +3,15 @@
 
 `timescale 1ns/100ps
 
-module ctrl (clk, rst_f, opcode, mm, stat, rf_we, alu_op, wb_sel, br_sel, pc_sel, ir_load, pc_write, pc_rst, rb_sel, mm_sel, dm_we);
+module ctrl (clk, rst_f, opcode, mm, stat, rf_we, alu_op, wb_sel, br_sel, pc_sel, ir_load, pc_write, pc_rst, rb_sel, mm_sel, dm_we, rw_sel);
 
 	/* TODO: Declare the ports listed above as inputs or outputs */
   	//completed declarations
   	input clk, rst_f;
   	input[3:0] stat, opcode, mm;
 
-  	output reg rf_we, wb_sel, br_sel, pc_sel, ir_load, pc_write, pc_rst, rb_sel, mm_sel, dm_we;
-  	output reg[1:0] alu_op;
+  	output reg rf_we, br_sel, pc_sel, ir_load, pc_write, pc_rst, rb_sel, mm_sel, dm_we, rw_sel;
+  	output reg[1:0] alu_op, wb_sel;
 
   	// states
  	 parameter start0 = 0, start1 = 1, fetch = 2, decode = 3, execute = 4, mem = 5, writeback = 6;
@@ -56,19 +56,20 @@ module ctrl (clk, rst_f, opcode, mm, stat, rf_we, alu_op, wb_sel, br_sel, pc_sel
 	always@(*)
 	begin
 		// set values to these defaults every loop
-		ir_load <= 0; 
-		rb_sel <= 0;
-		rf_we <= 0; 
-		wb_sel <= 0;		
-		br_sel <= 0;
-		pc_rst <= 0; 
-		pc_write <= 0;
-		alu_op <= 2'b10;
-		mm_sel <= 0;
-		dm_we <= 0;
+		ir_load = 0; 
+		rb_sel = 0;
+		rf_we = 0; 
+		wb_sel = 2'b00;		
+		br_sel = 0;
+		pc_rst = 0; 
+		pc_write = 0;
+		alu_op = 2'b10;
+		mm_sel = 0;
+		dm_we = 0;
+		rw_sel = 1;
 
 		if(opcode == NOOP) begin
-			pc_sel <= 0;
+			pc_sel = 0;
 		end
 
 		case(present_state)
@@ -79,27 +80,27 @@ module ctrl (clk, rst_f, opcode, mm, stat, rf_we, alu_op, wb_sel, br_sel, pc_sel
 				
 			start1:
 			begin
-				pc_rst <= 1; //reset pc to 0
+				pc_rst = 1; //reset pc to 0
 			end
 				
 			fetch:
 			begin
-				ir_load <= 1; // load instruction register
-				pc_sel <= 0;
-				pc_write <= 1; // write pc_out <= pc_in
+				ir_load = 1; // load instruction register
+				pc_sel = 0;
+				pc_write = 1; // write pc_out <= pc_in
 			end
 
 			decode:
 			begin
 				if(opcode == BNE || opcode == BRA) begin
-					br_sel <= 1;
+					br_sel = 1;
 				end else if(opcode == BNR || opcode == BRR) begin
-					br_sel <= 0;
+					br_sel = 0;
 				end
 
 				if((opcode == BNE || opcode == BNR) && (stat & mm) == 0 || (opcode == BRA || opcode == BRR) && (stat & mm) != 0) begin
-					pc_sel <= 1;
-					pc_write <= 1;
+					pc_sel = 1;
+					pc_write = 1;
 				end
 			end
 				
@@ -107,18 +108,17 @@ module ctrl (clk, rst_f, opcode, mm, stat, rf_we, alu_op, wb_sel, br_sel, pc_sel
 			begin
 				if(opcode == ALU_OP) begin
 					if(mm == 4'b1000) begin
-						alu_op <= 2'b01;
+						alu_op = 2'b01;
 					end else begin
-						alu_op <= 2'b00;
+						alu_op = 2'b00;
 					end
 				end
 
-				/*new shit*/
+				/*new*/
 				if(opcode == LOD || opcode == STR)begin
-					if(mm == 4'b1000)begin
-						alu_op <= 2'b01;
-					end else begin
-						mm_sel <= 1;
+					alu_op = 2'b11;
+					if(mm == 0)begin
+						mm_sel = 1;
 					end
 				end
 			end
@@ -127,39 +127,52 @@ module ctrl (clk, rst_f, opcode, mm, stat, rf_we, alu_op, wb_sel, br_sel, pc_sel
 			begin
 				if(opcode == ALU_OP) begin
 					if(mm == 4'b1000) begin
-						alu_op <= 2'b01;
+						alu_op = 2'b01;
 					end else begin
-						alu_op <= 2'b00;
+						alu_op = 2'b00;
 					end
 				end
 
-				/*new shit*/
-				if(opcode == LOD || opcode == STR) begin
-					if(mm == 4'b1000)begin
-						alu_op <= 2'b01;
-					end else begin
-						mm_sel <= 1;
+				/*new*/
+				if(opcode == LOD || opcode == STR)begin
+					alu_op = 2'b11;
+					if(mm == 0)begin
+						mm_sel = 1;
 					end
 				end
 
 				if(opcode == STR)begin
-					dm_we <= 1;
+					rb_sel = 1;
+					dm_we = 1;
+				end
+				
+				if(opcode == SWP) begin
+					rb_sel = 1;
+					wb_sel = 2'b10;
+					rf_we = 1;
 				end
 			end
 				
 			writeback:
 			begin
-				rb_sel <= 1;
+				rb_sel = 1;
 				if(opcode == ALU_OP || opcode == LOD) begin
-					rf_we <= 1;
+					rf_we = 1;
 				end
-
-				/*new shit*/
+				/*new*/
 				if(opcode == LOD) begin
-					if(mm == 4'b0000) begin
-						mm_sel <= 1;
+					if(mm == 0)begin
+						mm_sel = 1;
 					end
-					wb_sel <= 1;
+					alu_op = 2'b11;
+					wb_sel = 2'b01;
+				end
+				
+				if(opcode == SWP) begin
+					rw_sel = 0;
+					rb_sel = 1;
+					wb_sel = 2'b11;
+					rf_we = 1;
 				end
 			end
 

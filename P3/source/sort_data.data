@@ -1,10 +1,42 @@
 // ECE:3350 SISC processor project
 // Example data for the bubble sort program.
 //
-00000006 // :0  N = 6
+00000024 // :0  N = 36
 00000005 // :1  List: [5, -2, 18, 10, 0, -7]
 FFFFFFFE // :2
 00000012 // :3  Expected memory contents after execution: [-7, -2, 0, 5, 10, 18]
 0000000A // :4
 00000000 // :5
 FFFFFFF9 // :6
+
+// other numbers to test expandability (7-digit magnitude signed with F or 0)
+03608626
+01c26d21
+03549b70
+0f2a4855
+09410172
+f524210a
+0becd06a
+0ac4cd53
+0c1735ed
+03138244
+fd4e91a3
+077c1895
+0669a71c
+003bc6ff
+07bbbe69
+025c42d9
+0aa135ad
+0ef80b28
+f748f5a8
+03eefffa
+0add8c49
+05efc193
+0d57c0f9
+07f6d2f0
+061d1827
+06205332
+0e451e9d
+0cfb3df8
+0e2098d8
+07d55e71

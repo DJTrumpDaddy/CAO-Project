@@ -3,7 +3,7 @@
 
 `timescale 1ns/100ps
 
-module mux32 (in_a, in_b, sel, out);
+module mux32 (in_a, in_b, in_c, in_d, sel, out);
 
   /*
    *  32-BIT MULTIPLEXER - mux32.v
@@ -18,19 +18,22 @@ module mux32 (in_a, in_b, sel, out);
    *
    */
 
-  input  [31:0] in_a;
-  input  [31:0] in_b;
-  input         sel;
+  input  [31:0] in_a, in_b, in_c, in_d;
+  input  [1:0]  sel;
   output [31:0] out;
 
   reg   [31:0] outreg;
    
-  always @ (in_a, in_b, sel)
+  always @ (in_a, in_b, in_c, in_d, sel)
   begin
-    if (sel == 1'b0)
+    if (sel == 0)
       outreg = in_a;
-    else
-      outreg = in_b;
+    else if (sel == 1)
+	  outreg = in_b;
+	else if (sel == 2)
+	  outreg = in_c;
+	else
+      outreg = in_d;
   end
 
   assign out = outreg;

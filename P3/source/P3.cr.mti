@@ -1,0 +1,99 @@
+//iowa.uiowa.edu/shared/engineering/home/logwood/windowsdata/Desktop/P3/source/sisc_tb_p3.v {1 {vlog -work work -stats=none //iowa.uiowa.edu/shared/engineering/home/logwood/windowsdata/Desktop/P3/source/sisc_tb_p3.v
+Model Technology ModelSim DE-64 vlog 10.7b Compiler 2018.06 Jun  8 2018
+-- Compiling module sisc_tb
+
+Top level modules:
+	sisc_tb
+
+} {} {}} //iowa.uiowa.edu/shared/engineering/home/logwood/windowsdata/Desktop/P3/source/dm.v {1 {vlog -work work -stats=none //iowa.uiowa.edu/shared/engineering/home/logwood/windowsdata/Desktop/P3/source/dm.v
+Model Technology ModelSim DE-64 vlog 10.7b Compiler 2018.06 Jun  8 2018
+-- Compiling module dm
+
+Top level modules:
+	dm
+
+} {} {}} //iowa.uiowa.edu/shared/engineering/home/logwood/windowsdata/Desktop/P3/source/sisc.v {1 {vlog -work work -stats=none //iowa.uiowa.edu/shared/engineering/home/logwood/windowsdata/Desktop/P3/source/sisc.v
+Model Technology ModelSim DE-64 vlog 10.7b Compiler 2018.06 Jun  8 2018
+-- Compiling module sisc
+
+Top level modules:
+	sisc
+
+} {} {}} //iowa.uiowa.edu/shared/engineering/home/logwood/windowsdata/Desktop/P3/source/ir.v {1 {vlog -work work -stats=none //iowa.uiowa.edu/shared/engineering/home/logwood/windowsdata/Desktop/P3/source/ir.v
+Model Technology ModelSim DE-64 vlog 10.7b Compiler 2018.06 Jun  8 2018
+-- Compiling module ir
+
+Top level modules:
+	ir
+
+} {} {}} //iowa.uiowa.edu/shared/engineering/home/logwood/windowsdata/Desktop/P3/source/pc.v {1 {vlog -work work -stats=none //iowa.uiowa.edu/shared/engineering/home/logwood/windowsdata/Desktop/P3/source/pc.v
+Model Technology ModelSim DE-64 vlog 10.7b Compiler 2018.06 Jun  8 2018
+-- Compiling module pc
+
+Top level modules:
+	pc
+
+} {} {}} //iowa.uiowa.edu/shared/engineering/home/logwood/windowsdata/Desktop/P3/source/br.v {1 {vlog -work work -stats=none //iowa.uiowa.edu/shared/engineering/home/logwood/windowsdata/Desktop/P3/source/br.v
+Model Technology ModelSim DE-64 vlog 10.7b Compiler 2018.06 Jun  8 2018
+-- Compiling module br
+
+Top level modules:
+	br
+
+} {} {}} //iowa.uiowa.edu/shared/engineering/home/logwood/windowsdata/Desktop/P3/source/mux4.v {1 {vlog -work work -stats=none //iowa.uiowa.edu/shared/engineering/home/logwood/windowsdata/Desktop/P3/source/mux4.v
+Model Technology ModelSim DE-64 vlog 10.7b Compiler 2018.06 Jun  8 2018
+-- Compiling module mux4
+
+Top level modules:
+	mux4
+
+} {} {}} //iowa.uiowa.edu/shared/engineering/home/logwood/windowsdata/Desktop/P3/source/mux32.v {1 {vlog -work work -stats=none //iowa.uiowa.edu/shared/engineering/home/logwood/windowsdata/Desktop/P3/source/mux32.v
+Model Technology ModelSim DE-64 vlog 10.7b Compiler 2018.06 Jun  8 2018
+-- Compiling module mux32
+
+Top level modules:
+	mux32
+
+} {} {}} //iowa.uiowa.edu/shared/engineering/home/logwood/windowsdata/Desktop/P3/source/rf.v {1 {vlog -work work -stats=none //iowa.uiowa.edu/shared/engineering/home/logwood/windowsdata/Desktop/P3/source/rf.v
+Model Technology ModelSim DE-64 vlog 10.7b Compiler 2018.06 Jun  8 2018
+-- Compiling module rf
+
+Top level modules:
+	rf
+
+} {} {}} //iowa.uiowa.edu/shared/engineering/home/logwood/windowsdata/Desktop/P3/source/mux16.v {1 {vlog -work work -stats=none //iowa.uiowa.edu/shared/engineering/home/logwood/windowsdata/Desktop/P3/source/mux16.v
+Model Technology ModelSim DE-64 vlog 10.7b Compiler 2018.06 Jun  8 2018
+-- Compiling module mux16
+
+Top level modules:
+	mux16
+
+} {} {}} //iowa.uiowa.edu/shared/engineering/home/logwood/windowsdata/Desktop/P3/source/statreg.v {1 {vlog -work work -stats=none //iowa.uiowa.edu/shared/engineering/home/logwood/windowsdata/Desktop/P3/source/statreg.v
+Model Technology ModelSim DE-64 vlog 10.7b Compiler 2018.06 Jun  8 2018
+-- Compiling module statreg
+
+Top level modules:
+	statreg
+
+} {} {}} //iowa.uiowa.edu/shared/engineering/home/logwood/windowsdata/Desktop/P3/source/alu.v {1 {vlog -work work -stats=none //iowa.uiowa.edu/shared/engineering/home/logwood/windowsdata/Desktop/P3/source/alu.v
+Model Technology ModelSim DE-64 vlog 10.7b Compiler 2018.06 Jun  8 2018
+-- Compiling module alu
+
+Top level modules:
+	alu
+
+} {} {}} //iowa.uiowa.edu/shared/engineering/home/logwood/windowsdata/Desktop/P3/source/ctrl.v {1 {vlog -work work -stats=none //iowa.uiowa.edu/shared/engineering/home/logwood/windowsdata/Desktop/P3/source/ctrl.v
+Model Technology ModelSim DE-64 vlog 10.7b Compiler 2018.06 Jun  8 2018
+-- Compiling module ctrl
+
+Top level modules:
+	ctrl
+
+} {} {}} //iowa.uiowa.edu/shared/engineering/home/logwood/windowsdata/Desktop/P3/source/im.v {1 {vlog -work work -stats=none //iowa.uiowa.edu/shared/engineering/home/logwood/windowsdata/Desktop/P3/source/im.v
+Model Technology ModelSim DE-64 vlog 10.7b Compiler 2018.06 Jun  8 2018
+-- Compiling module im
+
+Top level modules:
+	im
+
+} {} {}}

@@ -1,3 +1,10 @@
+**TODO**
+- Implement new instructions (done!)
+- Verify new and old instructions still work (done!)
+- Write bubble sort program (done!)
+- Write multiplication program (not started)
+- update FSM diagram (not started)
+
 
 ***Notes***
 
