@@ -1,5 +1,10 @@
 10100000 // 01:		LDA R1,#0000		Sets R1=N1
 10200001 // 02:		LDA R2,#0000		Sets R2=N2
-80424001 // 03:	L1:	ADD R4,R2		add contents of R2 into R4
-8811FFFF // 04:		ADI R1,R1,-1		decrements R1
-7100FFFD // 05:		BNR 0,L1		Branch if R1 !=0
+80424001 // 03:	L1	ADD R4,R2		add contents of R2 into
+54000002 // 04:		brr 4, L2		Branch to L2
+88100001 // 05:		ADI r3,r0,1		Increment value in R3 to carry over
+8811FFFF // 06:	L2	ADI R1,R1,-1		decrements R1
+7100FFFB // 07:		Bnr L1			Branches to L1
+50300002 // 08:		L3: Sta R3, #0002	Stores value in R3
+50400003 // 09:		Sta R4#0003
+F0000000 //		HLT			Halt
