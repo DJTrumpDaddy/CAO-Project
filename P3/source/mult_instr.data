@@ -1,0 +1,5 @@
+10100000 // 01:		LDA R1,#0000		Sets R1=N1
+10200001 // 02:		LDA R2,#0000		Sets R2=N2
+80424001 // 03:	L1:	ADD R4,R2		add contents of R2 into R4
+8811FFFF // 04:		ADI R1,R1,-1		decrements R1
+7100FFFD // 05:		BNR 0,L1		Branch if R1 !=0
